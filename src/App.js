@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
-import PrivateClass from "./components/PrivateClass";
-import MasterClass from "./components/MasterClass";
-import MeetTheTeam from "./components/MeetTheTeam";
-import Partner from "./components/Partner";
-import Event from "./components/Event";
 import Gradient from "rgt";
 
 import "./App.css";
@@ -117,12 +112,12 @@ function App() {
         </a> */}
       </div>
 
-      {navState === "Event" ? <Event /> : null}
+      {/* {navState === "Event" ? <Event /> : null} */}
       {navState === "Home" ? <Home /> : null}
-      {navState === "PrivateClass" ? <PrivateClass /> : null}
+      {/* {navState === "PrivateClass" ? <PrivateClass /> : null}
       {navState === "MasterClass" ? <MasterClass /> : null}
       {navState === "MeetTheTeam" ? <MeetTheTeam /> : null}
-      {navState === "Partner" ? <Partner /> : null}
+      {navState === "Partner" ? <Partner /> : null} */}
 
       <Footer />
     </div>
