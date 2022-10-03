@@ -10,8 +10,12 @@ function App() {
 
   return (
     <div className="App">
-      <div className="Navbar-container align-middle place-content-center place-items-center flex-row inline-flex justify-even w-full h-23">
-        <div className="Navbar-logo bg-center bg-no-repeat bg-navlogo w-[15vw] h-20 pl-[15vw]"></div>
+      <div className="Navbar-container align-middle bg-[#191434] place-content-center place-items-center flex-row inline-flex justify-even w-full h-23">
+        <img
+          className="flex"
+          src={require("../src/assets/tnllogo.png")}
+          alt={"TNL LOGO"}
+        />
         <div
           onClick={() => {
             setNavState("Event");
