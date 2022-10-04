@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Camp from "./components/Camp";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Gradient from "rgt";
@@ -54,7 +55,7 @@ function App() {
       </div>
 
       {/* {navState === "Event" ? <Event /> : null} */}
-      {navState === "TNL" ? <Home /> : null}
+      {navState === "TNL" ? <Camp /> : null}
       {/* {navState === "PrivateClass" ? <PrivateClass /> : null}
       {navState === "MasterClass" ? <MasterClass /> : null}
       {navState === "MeetTheTeam" ? <MeetTheTeam /> : null}
