@@ -34,8 +34,8 @@ function App() {
           }}
           className={
             navState === "Team Profile"
-              ? "font-montserrat font-medium flex text-center mx-auto my-auto text-[0.9vw] tracking-wide text-white cursor-pointer underline decoration-2 underline-offset-4 decoration-red-400"
-              : "font-montserrat font-medium flex text-center mx-auto my-auto text-[0.9vw] tracking-wide text-white cursor-pointer"
+              ? "font-montserrat font-medium flex text-center pl-[2vw] mx-auto my-auto text-[0.9vw] tracking-wide text-white cursor-pointer underline decoration-2 underline-offset-4 decoration-red-400"
+              : "font-montserrat font-medium flex text-center pl-[2vw] mx-auto my-auto text-[0.9vw] tracking-wide text-white cursor-pointer"
           }
         >
           Team Profile

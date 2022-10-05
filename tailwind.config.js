@@ -22,6 +22,7 @@ module.exports = {
         magic3: "url('/src/assets/magic3.jpg')",
         magic4: "url('/src/assets/magic4.jpg')",
         bg8: "url('/src/assets/bg8.jpg')",
+        bg9: "url('/src/assets/bg9.jpg')",
       },
       // colors: {
       //   'test': 'linear-gradient(red, yellow)',
