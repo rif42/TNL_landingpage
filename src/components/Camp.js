@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import Slider from "react-slick";
 
 function Camp() {
   const [selectionState, setSelectionState] = useState(0);
@@ -18,6 +20,14 @@ function Camp() {
   let checkingchildage;
   let checkemail;
 
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    className: "w-[97%] mx-auto",
+  };
   return (
     <div className="wrapper flex flex-col w-full h-fit">
       <div className="w-full h-fit">
@@ -108,7 +118,7 @@ function Camp() {
             <div className="flex flex-row bg-map bg-center bg-no-repeat bg-contain justify-center place-self-center place-content-center align-middle w-[37vw] h-[20vw]"></div>
           ) : null}
 
-          <p className=" text-[1vw] text-blue-400 underline pt-[1vw]">
+          <p className=" text-[1vw] text-blue-400 underline pt-[1vw] hover:cursor-pointer">
             Learn More
           </p>
         </div>
@@ -296,20 +306,19 @@ function Camp() {
           that is unfamiliar to them. Here is where the magic happens!
         </p>
       </div>
-
-      <div className="w-full h-[30vw] flex flex-row justify-around align-middle">
-        <div className="w-[23vw] h-[30vw] flex flex-col justify-end bg-magic1 bg-center bg-cover bg-no-repeat">
-          <p className="text-white text-[1.5vw] font-bold text-left px-[2vw] ">
+      <Slider {...settings}>
+        <div className="w-[25vw] h-[30vw] bg-magic1 bg-center bg-cover bg-no-repeat">
+          <p className="text-white text-[1.5vw] mt-[60%] font-bold text-left px-[2vw]">
             EXPERIENTIAL SOCIAL EMOTIONAL LEARNING
           </p>
-          <p className="text-white text-[1vw] text-left px-[2vw] py-[1vw]">
+          <p className="text-white text-[1vw] text-left px-[2vw] py-[1vw] ">
             Expect the unexpected! You want to know more about oneself, throw
             them into the unknown. You can never truly know what you are made of
             until you are tested. Popularly known as The First Step!
           </p>
         </div>
-        <div className="w-[23vw] h-[30vw]  flex flex-col justify-end bg-magic2 bg-center bg-cover bg-no-repeat">
-          <p className="text-white text-[1.5vw] font-bold text-left px-[2vw] ">
+        <div className="w-[25vw] h-[30vw]  flex flex-col justify-end bg-magic2 bg-center bg-cover bg-no-repeat">
+          <p className="text-white text-[1.5vw] mt-[60%] font-bold text-left px-[2vw] ">
             MIND AND BODY CLEANSING
           </p>
           <p className="text-white text-[1vw] text-left px-[2vw] py-[1vw]">
@@ -318,8 +327,8 @@ function Camp() {
             with. The importance of self growth is self cleansing.
           </p>
         </div>
-        <div className="w-[23vw] h-[30vw]  flex flex-col justify-end bg-magic3 bg-center bg-cover bg-no-repeat">
-          <p className="text-white text-[1.5vw] font-bold text-left px-[2vw] ">
+        <div className="w-[25vw] h-[30vw]  flex flex-col justify-end bg-magic3 bg-center bg-cover bg-no-repeat ">
+          <p className="text-white text-[1.5vw] mt-[60%] font-bold text-left px-[2vw] ">
             PEAK PERFORMANCE PSYCHOLOGY
           </p>
           <p className="text-white text-[1vw] text-left px-[2vw] py-[1vw]">
@@ -327,8 +336,8 @@ function Camp() {
             do the same. #togetherstronger
           </p>
         </div>
-        <div className="w-[23vw] h-[30vw]  flex flex-col justify-end bg-magic4 bg-center bg-cover bg-no-repeat">
-          <p className="text-white text-[1.5vw] font-bold text-left px-[2vw] ">
+        <div className="w-[25vw] h-[30vw]  flex flex-col justify-end bg-magic4 bg-center bg-cover bg-no-repeat ">
+          <p className="text-white text-[1.5vw] mt-[60%] font-bold text-left px-[2vw] ">
             HIGH PERFORMANCE TEAM BUILDING
           </p>
           <p className="text-white text-[1vw] text-left px-[2vw] py-[1vw]">
@@ -336,7 +345,53 @@ function Camp() {
             need to work with people effectively and efficiently.
           </p>
         </div>
-      </div>
+        <div className="w-[25vw] h-[30vw] flex flex-col justify-end bg-magic5 bg-center bg-cover bg-no-repeat ">
+          <p className="text-white text-[1.5vw] mt-[60%] font-bold text-left px-[2vw] ">
+            HIGH PERFORMANCE TEAM BUILDING
+          </p>
+          <p className="text-white text-[1vw] text-left px-[2vw] py-[1vw]">
+            No person is an island. As long as you are living on this earth, you
+            need to work with people effectively and efficiently.
+          </p>
+        </div>
+        <div className="w-[25vw] h-[30vw] flex flex-col justify-end bg-magic6 bg-center bg-cover bg-no-repeat ">
+          <p className="text-white text-[1.5vw] mt-[60%] font-bold text-left px-[2vw] ">
+            HIGH PERFORMANCE TEAM BUILDING
+          </p>
+          <p className="text-white text-[1vw] text-left px-[2vw] py-[1vw]">
+            No person is an island. As long as you are living on this earth, you
+            need to work with people effectively and efficiently.
+          </p>
+        </div>
+        <div className="w-[25vw] h-[30vw] flex flex-col justify-end bg-magic7 bg-center bg-cover bg-no-repeat ">
+          <p className="text-white text-[1.5vw] mt-[60%] font-bold text-left px-[2vw] ">
+            HIGH PERFORMANCE TEAM BUILDING
+          </p>
+          <p className="text-white text-[1vw] text-left px-[2vw] py-[1vw]">
+            No person is an island. As long as you are living on this earth, you
+            need to work with people effectively and efficiently.
+          </p>
+        </div>
+        <div className="w-[25vw] h-[30vw] flex flex-col justify-end bg-magic8 bg-center bg-cover bg-no-repeat ">
+          <p className="text-white text-[1.5vw] mt-[60%] font-bold text-left px-[2vw] ">
+            HIGH PERFORMANCE TEAM BUILDING
+          </p>
+          <p className="text-white text-[1vw] text-left px-[2vw] py-[1vw]">
+            No person is an island. As long as you are living on this earth, you
+            need to work with people effectively and efficiently.
+          </p>
+        </div>
+        <div className="w-[25vw] h-[30vw] flex flex-col justify-end bg-magic9 bg-center bg-cover bg-no-repeat ">
+          <p className="text-white text-[1.5vw] mt-[60%] font-bold text-left px-[2vw] ">
+            HIGH PERFORMANCE TEAM BUILDING
+          </p>
+          <p className="text-white text-[1vw] text-left px-[2vw] py-[1vw]">
+            No person is an island. As long as you are living on this earth, you
+            need to work with people effectively and efficiently.
+          </p>
+        </div>
+      </Slider>
+
       <div className="w-full h-[55vw] flex flex-col bg-bg8 bg-center bg-cover bg-no-repeat">
         <img
           className="flex object-contain w-[30vw] mt-[10vw] ml-[15vw]"

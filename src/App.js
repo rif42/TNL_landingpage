@@ -61,7 +61,7 @@ function App() {
       {navState === "MeetTheTeam" ? <MeetTheTeam /> : null}
       {navState === "Partner" ? <Partner /> : null} */}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
