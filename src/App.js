@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="Navbar-container align-middle bg-[#191434] place-content-center place-items-center flex-row inline-flex justify-even w-full h-[4vw]">
+      <div className="Navbar-container align-middle bg-[#191434] place-content-center place-items-center flex-row inline-flex justify-even w-full h-[4vw] sticky top-0 z-50">
         <img
           onClick={() => {
             setNavState("TNL");
