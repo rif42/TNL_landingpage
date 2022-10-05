@@ -562,9 +562,14 @@ function Camp() {
           </label>
           <input
             onBlur={() => {
-              document.getElementById("schoolname").style.border =
-                "2px solid #00FF0A";
-              setSchoolname(document.getElementById("schoolname"));
+              if (document.getElementById("schoolname").value.length === 0) {
+                document.getElementById("schoolname").style.border =
+                  "2px solid red";
+              } else {
+                document.getElementById("schoolname").style.border =
+                  "2px solid #00FF0A";
+                setSchoolname(document.getElementById("schoolname"));
+              }
             }}
             id="schoolname"
             placeholder="Type your School name"
@@ -578,9 +583,14 @@ function Camp() {
           </label>
           <input
             onBlur={() => {
-              document.getElementById("pnumber").style.border =
-                "2px solid #00FF0A";
-              setPnumber(document.getElementById("pnumber"));
+              if (document.getElementById("pnumber").value.length === 0) {
+                document.getElementById("pnumber").style.border =
+                  "2px solid red";
+              } else {
+                document.getElementById("pnumber").style.border =
+                  "2px solid #00FF0A";
+                setSchoolname(document.getElementById("pnumber"));
+              }
             }}
             id="pnumber"
             type="number"
@@ -629,7 +639,7 @@ function Camp() {
           <input
             onBlur={() => {
               checkingchildage = document.getElementById("childrenage").value;
-              if (checkingchildage < 99) {
+              if (0 < checkingchildage < 99) {
                 document.getElementById("childrenage").style.border =
                   "2px solid #00FF0A";
                 setChildrenage(checkingchildage);
@@ -651,20 +661,23 @@ function Camp() {
           >
             Country
           </label>
-          {/* <input
-            id="country"
-            placeholder="Select Your Country"
-            className="flex flex-col justify-center w-[80%] h-[2.5vw] border-[0.1vw] border-gray-500 align-middle rounded-md px-[0.5vw] text-[0.9vw] self-center text-left font-montserrat py-[0.5vw]"
-          /> */}
           <select
             onBlur={() => {
-              setCountry(document.getElementById("country").value);
+              if (document.getElementById("country").value.length === 0) {
+                document.getElementById("country").style.border =
+                  "2px solid red";
+              } else {
+                document.getElementById("country").style.border =
+                  "2px solid #00FF0A";
+                setSchoolname(document.getElementById("country"));
+              }
             }}
             className="flex flex-col justify-center w-[80%] h-[2.5vw] border-[0.1vw] border-gray-500 align-middle rounded-md px-[0.5vw] text-[0.9vw] self-center text-left font-montserrat py-[0.5vw]"
             id="country"
             name="country"
             placeholder="Select Your Country"
           >
+            <option value=""></option>
             <option value="Afghanistan">Afghanistan</option>
             <option value="Åland Islands">Åland Islands</option>
             <option value="Albania">Albania</option>
