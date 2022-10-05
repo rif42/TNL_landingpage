@@ -347,47 +347,56 @@ function Camp() {
         </div>
         <div className="w-[25vw] h-[30vw] flex flex-col justify-end bg-magic5 bg-center bg-cover bg-no-repeat ">
           <p className="text-white text-[1.5vw] mt-[60%] font-bold text-left px-[2vw] ">
-            HIGH PERFORMANCE TEAM BUILDING
+            LEADERSHIP WHEN IT MATTERS
           </p>
           <p className="text-white text-[1vw] text-left px-[2vw] py-[1vw]">
-            No person is an island. As long as you are living on this earth, you
-            need to work with people effectively and efficiently.
+            Leaders eat last. Leaders are first in and last out. Leaders put
+            their neck on the line for their teams. You heard it all. Guess
+            what? Hearing it and reading about it is completely different from
+            being right in the thick of action.
           </p>
         </div>
         <div className="w-[25vw] h-[30vw] flex flex-col justify-end bg-magic6 bg-center bg-cover bg-no-repeat ">
           <p className="text-white text-[1.5vw] mt-[60%] font-bold text-left px-[2vw] ">
-            HIGH PERFORMANCE TEAM BUILDING
+            FAMILY, HEALING AND FORGIVENESS
           </p>
           <p className="text-white text-[1vw] text-left px-[2vw] py-[1vw]">
-            No person is an island. As long as you are living on this earth, you
-            need to work with people effectively and efficiently.
+            Have you seen a baby get upset and how it can go from crying to
+            laughing in a split second? Remember? When does that change as we
+            grow up? Why are some of us angry for hours, days, weeks, months,
+            years or in some serious cases, decades? The Healing starts with
+            you!
           </p>
         </div>
         <div className="w-[25vw] h-[30vw] flex flex-col justify-end bg-magic7 bg-center bg-cover bg-no-repeat ">
           <p className="text-white text-[1.5vw] mt-[60%] font-bold text-left px-[2vw] ">
-            HIGH PERFORMANCE TEAM BUILDING
+            TRUST AND RENEWAL
           </p>
           <p className="text-white text-[1vw] text-left px-[2vw] py-[1vw]">
-            No person is an island. As long as you are living on this earth, you
-            need to work with people effectively and efficiently.
+            A long forgotten word; TRUST! We need to believe and honestly, many
+            things will happen for us to lose faith, and that is when you
+            remember what you learned to RENEW your trust. It is never easy but
+            winners find a way.
           </p>
         </div>
         <div className="w-[25vw] h-[30vw] flex flex-col justify-end bg-magic8 bg-center bg-cover bg-no-repeat ">
           <p className="text-white text-[1.5vw] mt-[60%] font-bold text-left px-[2vw] ">
-            HIGH PERFORMANCE TEAM BUILDING
+            WORK ETHIC
           </p>
           <p className="text-white text-[1vw] text-left px-[2vw] py-[1vw]">
-            No person is an island. As long as you are living on this earth, you
-            need to work with people effectively and efficiently.
+            Efficiency and Effectiveness using the Game Plan. Work = Force X
+            Distance from a human centric angle. Agile in Education and Agile in
+            Time Management. Taking Educational Scrum to the next level
           </p>
         </div>
         <div className="w-[25vw] h-[30vw] flex flex-col justify-end bg-magic9 bg-center bg-cover bg-no-repeat ">
           <p className="text-white text-[1.5vw] mt-[60%] font-bold text-left px-[2vw] ">
-            HIGH PERFORMANCE TEAM BUILDING
+            HIGHLIGHTS OF EXPERIENCES
           </p>
           <p className="text-white text-[1vw] text-left px-[2vw] py-[1vw]">
-            No person is an island. As long as you are living on this earth, you
-            need to work with people effectively and efficiently.
+            The unknown is where the human mind and body thrive. For this very
+            simple reason, we cannot talk about our experiences that we custom
+            design for each and every camp.
           </p>
         </div>
       </Slider>
