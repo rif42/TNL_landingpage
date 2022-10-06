@@ -546,15 +546,16 @@ function Camp() {
                 document.getElementById("childname").value = "";
                 document.getElementById("childname").style.border =
                   "2px solid red";
-                alert("Name can't be less than 4 characters");
+                document.getElementById("name-error").innerHTML = "Name can't be less than 4 characters";
               } //else if check if all numbers
               else if (checkingchildname.match(/^[0-9]+$/)) {
                 document.getElementById("childname").value = "";
                 document.getElementById("childname").style.border =
                   "2px solid red";
-                alert("Name can't be numbers");
+                document.getElementById("name-error").innerHTML = "Name can't number";
               } else {
                 setChildname(checkingchildname);
+                document.getElementById("name-error").innerHTML = "";
                 document.getElementById("childname").style.border =
                   "2px solid #00FF0A";
               }
@@ -563,6 +564,7 @@ function Camp() {
             placeholder="Type your name"
             className="flex flex-col justify-center w-[80%] h-[2.5vw] border-[0.1vw] border-gray-500 align-middle rounded-md px-[0.5vw] text-[0.9vw] self-center text-left font-montserrat py-[0.5vw]"
           />
+          <p class="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]" id="name-error"></p>
           <label
             htmlFor="schoolname"
             className="font-montserrat text-[0.9vw] visited:text-[0.9vw] text-black place-self-start pl-[3.1vw] pt-[2vw] pb-[1vw]"
@@ -620,23 +622,25 @@ function Camp() {
                 document.getElementById("parentsname").value = "";
                 document.getElementById("parentsname").style.border =
                   "2px solid red";
-                alert("Name can't be less than 4 characters");
+                document.getElementById("parent-name-error").innerHTML = "Name can't be less than 4 characters";
               } //else if check if all numbers
               else if (checkingparentsname.match(/^[0-9]+$/)) {
                 document.getElementById("parentsname").value = "";
                 document.getElementById("parentsname").style.border =
                   "2px solid red";
-                alert("Name can't be numbers");
+                document.getElementById("parent-name-error").innerHTML = "Name can't be numbers";
               } else {
                 setParentsname(checkingparentsname);
                 document.getElementById("parentsname").style.border =
                   "2px solid #00FF0A";
+                document.getElementById("parent-name-error").innerHTML = "";
               }
             }}
             id="parentsname"
             placeholder="Type your Parents name"
             className="flex flex-col justify-center w-[80%] h-[2.5vw] border-[0.1vw] border-gray-500 align-middle rounded-md px-[0.5vw] text-[0.9vw] self-center text-left font-montserrat py-[0.5vw]"
           />
+          <p class="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]" id="parent-name-error"></p>
         </div>
         <div className="w-[33%] h-[100%] flex flex-col justify-center align-middle ">
           <label
@@ -652,11 +656,12 @@ function Camp() {
                 document.getElementById("childrenage").style.border =
                   "2px solid #00FF0A";
                 setChildrenage(checkingchildage);
+                document.getElementById("age-error").innerHTML = "";
               } else {
                 document.getElementById("childrenage").value = "";
                 document.getElementById("childrenage").style.border =
                   "2px solid red";
-                alert("Please input a valid number");
+                document.getElementById("age-error").innerHTML = "Please input a valid number";
               }
             }}
             id="childrenage"
@@ -664,6 +669,7 @@ function Camp() {
             placeholder="Type your children's age"
             className="flex flex-col justify-center w-[80%] h-[2.5vw] border-[0.1vw] border-gray-500 align-middle rounded-md px-[0.5vw] text-[0.9vw] self-center text-left font-montserrat py-[0.5vw]"
           />
+          <p class="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]" id="age-error"></p>
           <label
             htmlFor="country"
             className="font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pt-[2vw] pb-[1vw]"
@@ -999,10 +1005,10 @@ function Camp() {
                 setEmail(checkemail);
                 document.getElementById("email").style.border =
                   "2px solid #00FF0A";
+                document.getElementById("email-error").innerHTML = "";
               } else {
-                document.getElementById("email").value = "";
                 document.getElementById("email").style.border = "2px solid red";
-                alert("Please input a valid email");
+                document.getElementById("email-error").innerHTML = "Please enter an email address";
               }
             }}
             id="email"
@@ -1010,9 +1016,10 @@ function Camp() {
             placeholder="Parents@email.com"
             className="flex flex-col justify-center w-[80%] h-[2.5vw] border-[0.1vw] border-gray-500 align-middle rounded-md px-[0.5vw] text-[0.9vw] self-center text-left font-montserrat py-[0.5vw]"
           />
+          <p class="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]" id="email-error"></p>
           <label
             htmlFor="input"
-            className="font-montserrat text-[0.9vw] text-black text-left place-self-start pl-[3.1vw] pt-[2vw] pb-[1vw]"
+            className="font-montserrat text-[0.9vw] text-black text-left place-self-start pl-[3.1vw]"
           >
             Any additional information or concerns you have for your children
             and how you feel the next level coaches can help
