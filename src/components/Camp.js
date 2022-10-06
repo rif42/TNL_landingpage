@@ -53,8 +53,8 @@ function Camp() {
               }}
               className={
                 selectionState === 0
-                  ? "px-[1vw] font-medium"
-                  : "px-[1vw] font-medium text-gray-400"
+                  ? "px-[1vw] font-medium hover:cursor-pointer"
+                  : "px-[1vw] font-medium text-gray-400 hover:cursor-pointer"
               }
             >
               Details
@@ -65,8 +65,8 @@ function Camp() {
               }}
               className={
                 selectionState === 1
-                  ? "px-[1vw] font-medium"
-                  : "px-[1vw] font-medium text-gray-400"
+                  ? "px-[1vw] font-medium hover:cursor-pointer"
+                  : "px-[1vw] font-medium text-gray-400 hover:cursor-pointer"
               }
             >
               Photos
@@ -77,8 +77,8 @@ function Camp() {
               }}
               className={
                 selectionState === 2
-                  ? "px-[1vw] font-medium"
-                  : "px-[1vw] font-medium text-gray-400"
+                  ? "px-[1vw] font-medium hover:cursor-pointer"
+                  : "px-[1vw] font-medium text-gray-400 hover:cursor-pointer"
               }
             >
               Testimony
@@ -89,8 +89,8 @@ function Camp() {
               }}
               className={
                 selectionState === 3
-                  ? "px-[1vw] font-medium"
-                  : "px-[1vw] font-medium text-gray-400"
+                  ? "px-[1vw] font-medium hover:cursor-pointer"
+                  : "px-[1vw] font-medium text-gray-400 hover:cursor-pointer"
               }
             >
               Map
@@ -357,7 +357,7 @@ function Camp() {
           </p>
         </div>
         <div className="w-[25vw] h-[30vw] flex flex-col justify-end bg-magic6 bg-center bg-cover bg-no-repeat ">
-          <p className="text-white text-[1.5vw] mt-[60%] font-bold text-left px-[2vw] ">
+          <p className="text-white text-[1.5vw] mt-[55%] font-bold text-left px-[2vw] ">
             FAMILY, HEALING AND FORGIVENESS
           </p>
           <p className="text-white text-[1vw] text-left px-[2vw] py-[1vw]">
@@ -598,7 +598,7 @@ function Camp() {
               } else {
                 document.getElementById("pnumber").style.border =
                   "2px solid #00FF0A";
-                setSchoolname(document.getElementById("pnumber"));
+                setPnumber(document.getElementById("pnumber"));
               }
             }}
             id="pnumber"
@@ -678,7 +678,7 @@ function Camp() {
               } else {
                 document.getElementById("country").style.border =
                   "2px solid #00FF0A";
-                setSchoolname(document.getElementById("country"));
+                setCountry(document.getElementById("country"));
               }
             }}
             className="flex flex-col justify-center w-[80%] h-[2.5vw] border-[0.1vw] border-gray-500 align-middle rounded-md px-[0.5vw] text-[0.9vw] self-center text-left font-montserrat py-[0.5vw]"
