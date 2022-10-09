@@ -3,6 +3,7 @@ import Camp from "./components/Camp";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Gradient from "rgt";
+import Class from "./components/Class";
 
 import "./App.css";
 
@@ -54,8 +55,10 @@ function App() {
         </div>
       </div>
 
+      <Class />
+
       {/* {navState === "Event" ? <Event /> : null} */}
-      {navState === "TNL" ? <Camp /> : null}
+      {/* {navState === "TNL" ? <Camp /> : null} */}
       {/* {navState === "PrivateClass" ? <PrivateClass /> : null}
       {navState === "MasterClass" ? <MasterClass /> : null}
       {navState === "MeetTheTeam" ? <MeetTheTeam /> : null}

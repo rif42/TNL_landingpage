@@ -28,6 +28,9 @@ module.exports = {
         magic9: "url('/src/assets/magic9.jpg')",
         bg8: "url('/src/assets/bg8.jpg')",
         bg9: "url('/src/assets/bg9.jpg')",
+        bgclass: "url('/src/assets/bgclass.jpg')",
+        bgclass3: "url('/src/assets/bgclass3.jpg')",
+        bgclass6: "url('/src/assets/bgclass6.jpg')",
       },
       // colors: {
       //   'test': 'linear-gradient(red, yellow)',

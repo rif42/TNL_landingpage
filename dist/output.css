@@ -1429,6 +1429,11 @@ video {
   font-size: 1.2vw;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .text-\[0\.5vw\] {
   font-size: 0.5vw;
 }
@@ -1529,6 +1534,11 @@ video {
 .text-\[\#05194A\] {
   --tw-text-opacity: 1;
   color: rgb(5 25 74 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .text-gray-500 {
