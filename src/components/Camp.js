@@ -30,7 +30,7 @@ function Camp() {
   };
   return (
     <div className="wrapper flex flex-col w-full h-fit">
-      <div className="w-full h-fit">
+      {/* <div className="w-full h-fit">
         <img
           className="flex object-contain w-full"
           src={require("../assets/bg3.jpg")}
@@ -122,179 +122,9 @@ function Camp() {
             Learn More
           </p>
         </div>
-      </div>
-      <div className="w-full h-[5vw] bg-white"></div>
-      <div className="w-full flex flex-col justify-center align-middle h-[40vw] bg-white">
-        <h2
-          className=" text-[#19103D] text-[2.5vw] font-extrabold text-center mt-[-3vw] px-[3vw] leading-none 
-        pb-[3vw]"
-        >
-          LET US PAINT YOU A PICTURE WITH WORDS.
-        </h2>
-        <div className="flex flex-row justify-center place-self-center place-content-center align-middle h-[30vw] w-[75vw]">
-          <div className="bg-pic1 bg-center bg-contain bg-no-repeat w-[25vw] h-[30vw] flex flex-col place-content-end">
-            <p className="text-white text-[1.5vw] font-bold text-left px-[2vw] py-[2vw]">
-              They say the toughest seas make the best sailors.
-            </p>
-          </div>
-          <div className="bg-pic2 bg-center bg-contain bg-no-repeat w-[25vw] h-[30vw] flex flex-col place-content-end">
-            <p className="text-white text-[1.5vw] font-bold text-left px-[2vw] py-[1vw]">
-              They say that success happens in the uncomfortable zone.
-            </p>
-          </div>
-          <div className="bg-pic3 bg-center bg-contain bg-no-repeat w-[25vw] h-[30vw] flex flex-col place-content-end">
-            <p className="text-white text-[1.5vw] font-bold text-left px-[2vw] py-[1vw]">
-              They say the hardest tests and challenges make the champion.
-            </p>
-          </div>
-        </div>
-        <p className="text-[#19103D] text-[1.1vw] font-medium tracking-wide text-center px-[2vw] pt-[3vw]">
-          So why are parents not giving the kiddos this experience? You know
-          they need and must have this, so why?
-        </p>
-      </div>
+      </div> */}
 
-      <div className="w-full h-[50vw] flex flex-row justify-center align-middle bg-white">
-        <p className="text-[#19103D] text-[2.5vw] place-self-center font-extrabold text-left w-[30vw] px-[6vw] ">
-          FEAR! WE <br></br>AGREE WITH YOU
-        </p>
-        <img
-          className="flex object-contain w-[50vw]"
-          src={require("../assets/pic4.jpg")}
-          alt={"indoor climbing"}
-        />
-        <p className="text-[#19103D] text-[1.4vw] place-self-center tracking-tight leading-tight  text-left w-[30vw] px-[5vw] mt-[-3vw]">
-          Our precious little ones going through tough challenges? It is scary,
-          but you know what? They are so much more capable than what we give
-          them credit for. They need this test and they want this test. They are
-          born to win. Now, it is just you! Can you let go so that they can
-          become the best version of themselves?
-        </p>
-      </div>
-
-      <div className="w-full h-[38vw] flex flex-row justify-center align-middle bg-white">
-        <div className="w-[40%] flex flex-col justify-center align-middle">
-          <p className="text-[#19103D] text-[2.5vw] place-self-center font-extrabold text-left px-[5vw] ">
-            YOU KNOW WHAT IS THE TOUGHEST PART OF GROWTH? IT IS HARD WORK!
-          </p>
-          <p className="text-[#19103D] text-[1.4vw] place-self-center tracking-tight text-left px-[5vw] pt-[2vw]">
-            So teachers and parents out there who want it easy for their kids,
-            again, your search continues.
-          </p>
-        </div>
-        <div className="w-[50%] bg-pic5 bg-center bg-no-repeat bg-contain p-[10vw]"></div>
-      </div>
-
-      <div className="w-full h-[50vw] flex flex-row justify-center align-middle bg-white">
-        <p className="text-[#19103D] text-[1.4vw] place-self-center tracking-tight leading-tight  text-left w-[30vw] px-[5vw] mt-[-3vw]">
-          Furthest from that! We want a once in a lifetime experience that
-          triggers thoughts and emotions; for them to be the best version of
-          themselves. Now, that requires experiences that bring out these
-          emotions. We live in a world where they want everything now and it
-          must be easy. For good things however, one has to put in some work.
-        </p>
-        <img
-          className="flex object-contain w-[50vw]"
-          src={require("../assets/pic6.jpg")}
-          alt={"indoor climbing"}
-        />
-        <p className="text-[#19103D] text-[2.5vw] tracking-tight leading-tight place-self-center font-extrabold text-left w-[30vw] px-[6vw] ">
-          DO NOT GET US WRONG! WE ARE NOT HERE TO TORTURE THE KIDDOS.
-        </p>
-      </div>
-      <div
-        onClick={() => {
-          setquoteState(quoteState + 1 === 4 ? 0 : quoteState + 1);
-        }}
-        className="w-full h-[35vw]"
-      >
-        <div className="w-full h-[35vw] flex flex-col justify-center align-middle bg-[#F6A652] z-[1]">
-          <div className=" w-[80vw] h-[25vw] place-self-center flex flex-col justify-center align-middle  bg-white rounded-3xl">
-            <img
-              className="absolute place-self-end mt-[-8vw] ml-[-2vw] w-[10vw]"
-              src={require("../assets/icomma.jpg")}
-              alt={"comma icon"}
-            />
-            <p className="text-[#19103D] text-[1.4vw]  tracking-tight leading-tight text-center px-[15vw] ">
-              {quoteState === 0
-                ? "“The Next Level Camp was one of the hardest things I have done in my life, but if you ask me to do it again, I will do it in a heartbeat. This is something I would recommend for every teen out there and the relationships built here, lasts a lifetime.”"
-                : quoteState === 1
-                ? "“When she first came to Score she was just going through the motions of life which has landed her into some trouble,but as months passed with guidance from the coaches.I've seen her transform into a self-aware and  driven to excel young powerhouse.”"
-                : quoteState === 2
-                ? "“The Next Level Camp, truly stood up to the name. Before going for the Camp my 12yrs old boy was a lost. He wasn't motivated and we were finding it hard to inspire him. Attending the Camp and being away from home for 7 days, it took Irfan away from his comfort zone. Ever since Camp, Irfan had grown to be an independent boy with more self confidence and self awareness. Looking forward to The Next Level Camp.”"
-                : quoteState === 3
-                ? "“TNL widened my daughter’s awareness to the good and uglies of life but more importantly, reminded her of the gift of choice and gave her the moment and support to build herself up. As a parent, there is nothing more elating and comforting than hearing your child say, “I’ve got this!”"
-                : null}
-            </p>
-            <p className="text-[#19103D] text-[1.5vw] font-bold text-center px-[15vw] pt-[2vw]">
-              {quoteState === 0
-                ? "Kenny, The Next Level 2018 Kulim Camp, Malaysia!"
-                : quoteState === 1
-                ? "From a Dad @ Score Campus, 2022"
-                : quoteState === 2
-                ? "From a Score Campus Dad, TNL June 2022"
-                : quoteState === 3
-                ? "Maureen, mom of Ela @ TNL June 2022"
-                : null}
-            </p>
-          </div>
-        </div>
-
-        <div className=" buttons absolute inline-flex flex-row place-self-center items-center justify-around mt-[-8vw] ml-[-5vw] w-[10vw] z-10">
-          <svg
-            width={quoteState === 0 ? "1vw" : "0.6vw"}
-            height={quoteState === 0 ? "1vw" : "0.6vw"}
-            viewBox="0 0 11 11"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              r="5.5"
-              transform="matrix(1 0 0 -1 5.5 5.5)"
-              fill={quoteState === 0 ? "#3E3E3E" : "#BFBFBF"}
-            />
-          </svg>
-          <svg
-            width={quoteState === 1 ? "1vw" : "0.6vw"}
-            height={quoteState === 1 ? "1vw" : "0.6vw"}
-            viewBox="0 0 11 11"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              r="5.5"
-              transform="matrix(1 0 0 -1 5.5 5.5)"
-              fill={quoteState === 1 ? "#3E3E3E" : "#BFBFBF"}
-            />
-          </svg>
-          <svg
-            width={quoteState === 2 ? "1vw" : "0.6vw"}
-            height={quoteState === 2 ? "1vw" : "0.6vw"}
-            viewBox="0 0 11 11"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              r="5.5"
-              transform="matrix(1 0 0 -1 5.5 5.5)"
-              fill={quoteState === 2 ? "#3E3E3E" : "#BFBFBF"}
-            />
-          </svg>
-          <svg
-            width={quoteState === 3 ? "1vw" : "0.6vw"}
-            height={quoteState === 3 ? "1vw" : "0.6vw"}
-            viewBox="0 0 11 11"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              r="5.5"
-              transform="matrix(1 0 0 -1 5.5 5.5)"
-              fill={quoteState === 3 ? "#3E3E3E" : "#BFBFBF"}
-            />
-          </svg>
-        </div>
-      </div>
+      <div className="w-full h-[45vw] bg-white"></div>
 
       <div className="w-full h-[20vw] flex flex-col justify-center align-middle">
         <p className="text-black text-[2.5vw] tracking-tight leading-tight font-extrabold text-center ">
@@ -401,6 +231,178 @@ function Camp() {
         </div>
       </Slider>
 
+      <div className="w-full h-[50vw] flex flex-row justify-center bg-pic4 bg-center bg-no-repeat bg-contain align-middle bg-[#F8F0F8]">
+        <p className="text-[#19103D] text-[2.5vw] place-self-center font-extrabold text-left w-[20vw] mr-[25vw] z-10">
+          FEAR! WE <br></br>AGREE WITH YOU
+        </p>
+        {/* <img
+          className="flex object-cover content-center self-center h-[40vw] w-full z-[-1]"
+          src={require("../assets/pic4.jpg")}
+          alt={"indoor climbing"}
+        /> */}
+        <p className="text-[#19103D] text-[1.4vw] place-self-center tracking-tight leading-tight z-10 text-left w-[20vw] ml-[25vw] mt-[-3vw]">
+          Our precious little ones going through tough challenges? It is scary,
+          but you know what? They are so much more capable than what we give
+          them credit for. They need this test and they want this test. They are
+          born to win. Now, it is just you! Can you let go so that they can
+          become the best version of themselves?
+        </p>
+      </div>
+
+      <div className="w-full h-[38vw] flex flex-row justify-center align-middle mt-[-5vw] bg-white">
+        <div className="w-[40%] flex flex-col justify-center align-middle">
+          <p className="text-[#19103D] text-[2.5vw] place-self-center font-extrabold text-left px-[5vw] ">
+            YOU KNOW WHAT IS THE TOUGHEST PART OF GROWTH? IT IS HARD WORK!
+          </p>
+          <p className="text-[#19103D] text-[1.4vw] place-self-center tracking-tight text-left px-[5vw] pt-[2vw]">
+            So teachers and parents out there who want it easy for their kids,
+            again, your search continues.
+          </p>
+        </div>
+        <div className="w-[50%] bg-pic5 bg-center bg-no-repeat bg-contain p-[10vw]"></div>
+      </div>
+
+      <div className="w-full h-[45vw] mt-[2vw] flex flex-row justify-center align-middle bg-[#F8F0F8]">
+        <p className="text-[#19103D] text-[1.4vw] place-self-center tracking-tight leading-tight  text-left w-[30vw] px-[5vw] mt-[-3vw]">
+          Furthest from that! We want a once in a lifetime experience that
+          triggers thoughts and emotions; for them to be the best version of
+          themselves. Now, that requires experiences that bring out these
+          emotions. We live in a world where they want everything now and it
+          must be easy. For good things however, one has to put in some work.
+        </p>
+        <img
+          className="flex object-contain w-[50vw]"
+          src={require("../assets/pic6.jpg")}
+          alt={"indoor climbing"}
+        />
+        <p className="text-[#19103D] text-[2.5vw] tracking-tight leading-tight place-self-center font-extrabold text-left  w-[30vw] px-[6vw] ">
+          DO NOT GET US WRONG! WE ARE NOT HERE TO TORTURE THE KIDDOS.
+        </p>
+      </div>
+      <div
+        onClick={() => {
+          setquoteState(quoteState + 1 === 4 ? 0 : quoteState + 1);
+        }}
+        className="w-full h-[35vw]"
+      >
+        <div className="w-full h-[35vw] flex flex-col justify-center align-middle bg-[#F6A652] z-[1]">
+          <div className=" w-[80vw] h-[25vw] place-self-center flex flex-col justify-center align-middle  bg-white rounded-3xl">
+            <img
+              className="absolute place-self-end mt-[-8vw] ml-[-2vw] w-[10vw]"
+              src={require("../assets/icomma.jpg")}
+              alt={"comma icon"}
+            />
+            <p className="text-[#19103D] text-[1.4vw]  tracking-tight leading-tight text-center px-[15vw] ">
+              {quoteState === 0
+                ? "“The Next Level Camp was one of the hardest things I have done in my life, but if you ask me to do it again, I will do it in a heartbeat. This is something I would recommend for every teen out there and the relationships built here, lasts a lifetime.”"
+                : quoteState === 1
+                ? "“When she first came to Score she was just going through the motions of life which has landed her into some trouble,but as months passed with guidance from the coaches.I've seen her transform into a self-aware and  driven to excel young powerhouse.”"
+                : quoteState === 2
+                ? "“The Next Level Camp, truly stood up to the name. Before going for the Camp my 12yrs old boy was a lost. He wasn't motivated and we were finding it hard to inspire him. Attending the Camp and being away from home for 7 days, it took Irfan away from his comfort zone. Ever since Camp, Irfan had grown to be an independent boy with more self confidence and self awareness. Looking forward to The Next Level Camp.”"
+                : quoteState === 3
+                ? "“TNL widened my daughter’s awareness to the good and uglies of life but more importantly, reminded her of the gift of choice and gave her the moment and support to build herself up. As a parent, there is nothing more elating and comforting than hearing your child say, “I’ve got this!”"
+                : null}
+            </p>
+            <p className="text-[#19103D] text-[1.5vw] font-bold text-center px-[15vw] pt-[2vw]">
+              {quoteState === 0
+                ? "Kenny, The Next Level 2018 Kulim Camp, Malaysia!"
+                : quoteState === 1
+                ? "From a Dad @ Score Campus, 2022"
+                : quoteState === 2
+                ? "From a Score Campus Dad, TNL June 2022"
+                : quoteState === 3
+                ? "Maureen, mom of Ela @ TNL June 2022"
+                : null}
+            </p>
+          </div>
+        </div>
+
+        <div className=" buttons absolute inline-flex flex-row place-self-center items-center justify-around mt-[-8vw] ml-[-5vw] w-[10vw] z-10">
+          <svg
+            width={quoteState === 0 ? "1vw" : "0.6vw"}
+            height={quoteState === 0 ? "1vw" : "0.6vw"}
+            viewBox="0 0 11 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              r="5.5"
+              transform="matrix(1 0 0 -1 5.5 5.5)"
+              fill={quoteState === 0 ? "#3E3E3E" : "#BFBFBF"}
+            />
+          </svg>
+          <svg
+            width={quoteState === 1 ? "1vw" : "0.6vw"}
+            height={quoteState === 1 ? "1vw" : "0.6vw"}
+            viewBox="0 0 11 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              r="5.5"
+              transform="matrix(1 0 0 -1 5.5 5.5)"
+              fill={quoteState === 1 ? "#3E3E3E" : "#BFBFBF"}
+            />
+          </svg>
+          <svg
+            width={quoteState === 2 ? "1vw" : "0.6vw"}
+            height={quoteState === 2 ? "1vw" : "0.6vw"}
+            viewBox="0 0 11 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              r="5.5"
+              transform="matrix(1 0 0 -1 5.5 5.5)"
+              fill={quoteState === 2 ? "#3E3E3E" : "#BFBFBF"}
+            />
+          </svg>
+          <svg
+            width={quoteState === 3 ? "1vw" : "0.6vw"}
+            height={quoteState === 3 ? "1vw" : "0.6vw"}
+            viewBox="0 0 11 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              r="5.5"
+              transform="matrix(1 0 0 -1 5.5 5.5)"
+              fill={quoteState === 3 ? "#3E3E3E" : "#BFBFBF"}
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div className="w-full flex flex-col justify-center align-middle h-[40vw] pt-[10vw] bg-white">
+        <h2
+          className=" text-[#19103D] text-[2.5vw] font-extrabold text-center mt-[-3vw] px-[3vw] leading-none 
+        pb-[3vw]"
+        >
+          LET US PAINT YOU A PICTURE WITH WORDS.
+        </h2>
+        <div className="flex flex-row justify-center place-self-center place-content-center align-middle h-[30vw] w-[75vw]">
+          <div className="bg-pic1 bg-center bg-contain bg-no-repeat w-[25vw] h-[30vw] flex flex-col place-content-end">
+            <p className="text-white text-[1.5vw] font-bold text-left px-[2vw] py-[2vw]">
+              They say the toughest seas make the best sailors.
+            </p>
+          </div>
+          <div className="bg-pic2 bg-center bg-contain bg-no-repeat w-[25vw] h-[30vw] flex flex-col place-content-end">
+            <p className="text-white text-[1.5vw] font-bold text-left px-[2vw] py-[1vw]">
+              They say that success happens in the uncomfortable zone.
+            </p>
+          </div>
+          <div className="bg-pic3 bg-center bg-contain bg-no-repeat w-[25vw] h-[30vw] flex flex-col place-content-end">
+            <p className="text-white text-[1.5vw] font-bold text-left px-[2vw] py-[1vw]">
+              They say the hardest tests and challenges make the champion.
+            </p>
+          </div>
+        </div>
+        <p className="text-[#19103D] text-[1.1vw] font-medium tracking-wide text-center px-[2vw] pt-[3vw]">
+          So why are parents not giving the kiddos this experience? You know
+          they need and must have this, so why?
+        </p>
+      </div>
+
       <div className="w-full h-[55vw] flex flex-col bg-bg8 bg-center bg-cover bg-no-repeat">
         <img
           className="flex object-contain w-[30vw] mt-[10vw] ml-[15vw]"
@@ -428,7 +430,7 @@ function Camp() {
         </div>
       </div>
 
-      <div className="w-full h-[40vw] flex flex-row justify-center align-middle">
+      <div className="w-full h-[40vw] flex flex-row justify-center align-middle bg-[#F8F0F8]">
         <div className="w-[25vw] h-[30vw] flex flex-col place-self-center justify-center align-middle text-[2.5vw] text-[#19103D] font-bold text-left px-[3vw] ">
           THE NEXT LEVEL EXPERIENCE IS BROUGHT TO YOU AT
         </div>
@@ -523,7 +525,7 @@ function Camp() {
           </div>
         </div>
       </div>
-      <div className="w-full h-[50vw] flex flex-row justify-center align-middle p-[3vw]">
+      <div className="w-full h-[50vw] flex flex-row justify-center align-middle p-[3vw] bg-[#F8F0F8]">
         <div className="w-[33%] h-[100%] flex flex-col justify-center align-middle bg-[#FB7135]">
           <p className="text-[4vw] text-white font-extrabold leading-none px-[3vw] text-left">
             HOW CAN I CONNECT WITH THE COACHES?

@@ -19,6 +19,7 @@ module.exports = {
         pic1: "url('/src/assets/pic1.jpg')",
         pic2: "url('/src/assets/pic2.jpg')",
         pic3: "url('/src/assets/pic3.jpg')",
+        pic4: "url('/src/assets/pic4.jpg')",
         pic5: "url('/src/assets/pic5.jpg')",
         magic1: "url('/src/assets/magic1.jpg')",
         magic2: "url('/src/assets/magic2.jpg')",

@@ -197,7 +197,7 @@ function App() {
                   : "px-[1vw] font-medium text-gray-400 hover:cursor-pointer"
               }
             >
-              Photos
+              Why?
             </p>
             <p
               onClick={() => {
@@ -226,16 +226,38 @@ function App() {
           </div>
           {selectionState === 0 ? (
             <p className="text-[2vw] font-bold text-center px-[5vw] py-[3vw] h-[20vw] leading-tight ">
-              {slideState === 0
-                ? "Once a year, a child or a teen must leave the comfort of home and luxury and go to a place called THE NEXT LEVEL CAMP, to answer the tough questions of life to GROW!"
-                : slideState === 1
-                ? "The Perfect Bridge between the students’ academic learning and the real world."
-                : slideState === 2
-                ? "It is exactly as it says; The First Step! It is all you and this can potentially be one of the toughest 8 hours you would have spent in your life."
-                : null}
+              {slideState === 0 ? (
+                <p>
+                  Junior Camp, 6-10 years old <br />
+                  <span className="text-[1.5vw]">
+                    12th to 16th December 2022
+                  </span>
+                  <br />
+                  <br />
+                  Senior Camp, 11-17 years old <br />
+                  <span className="text-[1.5vw]">
+                    12th to 18th December 2022
+                  </span>
+                </p>
+              ) : slideState === 1 ? (
+                "The Perfect Bridge between the students’ academic learning and the real world."
+              ) : slideState === 2 ? (
+                "It is exactly as it says; The First Step! It is all you and this can potentially be one of the toughest 8 hours you would have spent in your life."
+              ) : null}
             </p>
           ) : selectionState === 1 ? (
-            <div className="flex flex-row justify-center place-self-center place-content-center align-middle w-[20vw] h-[20vw]"></div>
+            <div className="flex flex-row justify-center place-self-center place-content-center align-middle w-[35vw] h-[20vw]">
+              {" "}
+              <p className="text-[2vw] font-bold text-center leading-tight pt-[3vw] ">
+                {slideState === 0
+                  ? "Once a year, a child or a teen must leave the comfort of home and luxury and go to a place called THE NEXT LEVEL CAMP, to answer the tough questions of life to GROW!"
+                  : slideState === 1
+                  ? "The Perfect Bridge between the students’ academic learning and the real world."
+                  : slideState === 2
+                  ? "It is exactly as it says; The First Step! It is all you and this can potentially be one of the toughest 8 hours you would have spent in your life."
+                  : null}
+              </p>
+            </div>
           ) : selectionState === 2 ? (
             <p className="flex flex-col place-self-center justify-center item text-[1.1vw] font-medium italic text-center px-[5vw] w-[45vw] h-[20vw] ">
               “The Next Level Camp was one of the hardest things I have done in
@@ -250,12 +272,19 @@ function App() {
             <div className="flex flex-row bg-map bg-center bg-no-repeat bg-contain justify-center place-self-center place-content-center align-middle w-[37vw] h-[20vw]"></div>
           ) : null}
 
-          <p className=" text-[1vw] text-blue-400 underline pt-[1vw] hover:cursor-pointer">
+          {/* <p className=" text-[1vw] text-blue-400 underline pt-[1vw] hover:cursor-pointer">
             Learn More
-          </p>
+          </p> */}
         </div>
       </div>
 
+      {slideState === 0 ? (
+        <Camp />
+      ) : slideState === 1 ? (
+        <Class />
+      ) : slideState === 2 ? (
+        <Home />
+      ) : null}
       {/* <Camp /> */}
 
       {/* {navState === "Event" ? <Event /> : null} */}

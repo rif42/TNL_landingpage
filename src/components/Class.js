@@ -14,7 +14,7 @@ function Class() {
 
   return (
     <div className="wrapper flex flex-col w-full h-fit">
-      <div className="w-full ">
+      {/* <div className="w-full ">
         <img
           className="flex object-cover w-full h-[45vw]"
           src={require("../assets/bgclass2.jpg")}
@@ -105,9 +105,9 @@ function Class() {
             Learn More
           </p>
         </div>
-      </div>
+      </div> */}
 
-      <div className="w-full h-[5vw]"></div>
+      <div className="w-full h-[50vw]"></div>
 
       <div className="w-full h-[65vw] bg-bgclass3 bg-center bg-no-repeat bg-cover flex flex-col justify-center align-middle">
         <h2 className="text-white text-[3vw] font-extrabold place-self-center justify-center text-center px-[10vw] leading-none">

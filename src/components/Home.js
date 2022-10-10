@@ -7,7 +7,7 @@ function Home() {
 
   return (
     <div className="wrapper flex flex-col w-full h-fit">
-      <div className="w-full h-fit">
+      {/* <div className="w-full h-fit">
         <img
           className="flex object-contain w-full"
           src={require("../assets/bg1.jpg")}
@@ -37,8 +37,8 @@ function Home() {
             Learn More
           </p>
         </div>
-      </div>
-      <div className="w-full h-[5vw] bg-white"></div>
+      </div> */}
+      <div className="w-full h-[50vw] bg-white"></div>
 
       <div className="w-full h-fit flex flex-col bg-white">
         <h2 className=" absolute place-self-center justify-center text-[#19103D] text-[4vw] font-extrabold text-center leading-none px-[15vw]">
