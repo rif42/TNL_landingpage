@@ -302,7 +302,7 @@ function Home() {
         </a>
       </div>
 
-      <div className="flex flex-col w-full h-[180vw] bg-component4 bg-center bg-cover bg-no-repeat">
+      <div className="flex flex-col w-full h-[200vw] bg-component4 bg-center bg-cover bg-no-repeat">
         <div className="flex flex-col w-[45vw] ml-[12vw] mt-[10vw] h-fit">
           <p className="text-left text-[#05194A] text-[1.1vw] font-medium">
             The complete Score Campus experience
@@ -325,7 +325,154 @@ function Home() {
         <div
           className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
          place-self-end mt-[-5vw] mr-[10vw]"
-        ></div>
+        >
+          <img
+            className="w-[12vw] place-self-center"
+            src={require("../assets/card1.png")}
+            alt={"the first step"}
+          />
+          <h2 className="text-left pl-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
+            The First Step
+          </h2>
+          <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
+            There are 38 values, attributes and characteristics that you must
+            know about your children. It is designed for kids above 10 but you
+            will be surprised by the outcomes.
+          </p>
+        </div>
+
+        <div
+          className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
+         place-self-start ml-[10vw]"
+        >
+          <img
+            className="w-[12vw] place-self-center"
+            src={require("../assets/card2.png")}
+            alt={"Assigned to a coach"}
+          />
+          <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
+            Assigned to a coach
+          </h2>
+          <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
+            For academic planning for English, Maths and Science
+          </p>
+        </div>
+
+        <div
+          className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
+         place-self-end mt-[-10vw] mr-[25vw]"
+        >
+          <img
+            className="w-[20vw] place-self-center"
+            src={require("../assets/card3.png")}
+            alt={"Weekdays are for academic coaching"}
+          />
+          <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
+            Weekdays are for academic coaching
+          </h2>
+          <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
+            In campus or online. We do this though the Let’s Flip App and
+            www.scorecampus.com
+          </p>
+        </div>
+
+        <div
+          className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
+         place-self-start mt-[-5vw] ml-[5vw]"
+        >
+          <img
+            className="w-[12vw] place-self-center"
+            src={require("../assets/card4.png")}
+            alt={"Saturdays are for character development"}
+          />
+          <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
+            Saturdays are for character development
+          </h2>
+          <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
+            Skills and Project Work.
+          </p>
+        </div>
+
+        <div
+          className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
+         place-self-end mt-[-10vw] mr-[13vw]"
+        >
+          <img
+            className="w-[12vw] place-self-center"
+            src={require("../assets/card5.png")}
+            alt={"The Next Level Camp"}
+          />
+          <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
+            The Next Level Camp
+          </h2>
+          <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
+            5 to 7 days of an experience that every child in the world must go
+            for. More details in the page.
+          </p>
+        </div>
+
+        <div
+          className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
+         place-self-start mt-[-5vw] ml-[30vw]"
+        >
+          <img
+            className="w-[12vw] place-self-center"
+            src={require("../assets/card6.png")}
+            alt={"Classroom Without Walls"}
+          />
+          <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
+            Classroom Without Walls
+          </h2>
+          <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
+            4 days Project Management Experience that bridges your academic
+            world to the corporate experience.
+          </p>
+        </div>
+
+        <div
+          className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
+         place-self-end mt-[-5vw] mr-[8vw]"
+        >
+          <img
+            className="w-[12vw] place-self-center"
+            src={require("../assets/card7.png")}
+            alt={"Competitive Sports"}
+          />
+          <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
+            Competitive Sports
+          </h2>
+          <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
+            Sports reveals character and we build on them
+          </p>
+        </div>
+        <a
+          className="flex hover:cursor-pointer bg-gradient-to-r from-[#FC5229] to-[#AF067D] font-extrabold text-white text-[3vw] tracking-wide place-items-center rounded-full mt-[5vw] mx-auto px-[4vw] w-fit h-[6vw]"
+          href="##"
+        >
+          GET IN TOUCH
+        </a>
+      </div>
+
+      <div className="flex flex-col justify-center w-full h-[40vw] ">
+        <img
+          className=" absolute w-[80vw] place-self-center z-0"
+          src={require("../assets/bghome1.jpg")}
+          alt={"background pic"}
+        />
+        <h2 className="text-center place-self-center text-white text-[2.5vw] font-bold leading-none tracking-tighter w-[60vw] z-10">
+          We built this entire EcoSystem based on Love.
+        </h2>
+        <p className="text-center place-self-center px-[3vw] text-white text-[1.1vw] font-medium w-[60vw] pt-[2vw] z-10">
+          One might think that this is mushy talk but I challenge you to come
+          see the family we have here. Everything here is built as a model for
+          schools to follow. Come visit with us!
+        </p>
+        <a
+          className="flex hover:cursor-pointer bg-gradient-to-r from-[#FC5229] to-[#AF067D] font-extrabold text-white text-[1.1vw] tracking-wide place-self-center place-content-center place-items-center rounded-full justify-center align-middle mt-[2vw] px-[2vw] w-fit h-[2.5vw] z-10"
+          href="##"
+        >
+          GET IN TOUCH
+        </a>
       </div>
     </div>
   );
