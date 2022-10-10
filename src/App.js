@@ -16,6 +16,7 @@ function App() {
 
   var settings = {
     dots: false,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -68,25 +69,80 @@ function App() {
           Contact Us
         </div>
       </div>
-      {/* <Slider {...settings}>
-        <img
-          className="flex object-contain w-full"
-          src={require("./assets/bg3.jpg")}
-          alt={"background3"}
-        />
-        <img
-          className="flex object-contain w-full"
-          src={require("./assets/bg2.jpg")}
-          alt={"background2"}
-        />
-        <img
-          className="flex object-contain w-full"
-          src={require("./assets/bg1.jpg")}
-          alt={"background1"}
-        />
-      </Slider> */}
 
       <div className="w-full h-fit absolute ">
+        <div className="absolute flex flex-row justify-center align-middle w-[10vw] h-[3vw] z-50 ml-[3vw] mt-[42vw]">
+          <svg
+            width="3vw"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {slideState === 0 ? (
+              <circle //active
+                cx="5"
+                cy="5"
+                r="5"
+                stroke="white"
+                transform="translate(1 1)"
+              />
+            ) : null}
+            <circle // not active
+              cx="2"
+              cy="2"
+              r="2"
+              fill={slideState === 0 ? "white" : "#DACCCD"}
+              transform="translate(4 4)"
+            />
+          </svg>
+          <svg
+            width="3vw"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {slideState === 1 ? (
+              <circle //active
+                cx="5"
+                cy="5"
+                r="5"
+                stroke="white"
+                transform="translate(1 1)"
+              />
+            ) : null}
+            <circle // not active
+              cx="2"
+              cy="2"
+              r="2"
+              fill={slideState === 1 ? "white" : "#DACCCD"}
+              transform="translate(4 4)"
+            />
+          </svg>
+
+          <svg
+            width="3vw"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {slideState === 2 ? (
+              <circle //active
+                cx="5"
+                cy="5"
+                r="5"
+                stroke="white"
+                transform="translate(1 1)"
+              />
+            ) : null}
+            <circle // not active
+              cx="2"
+              cy="2"
+              r="2"
+              fill={slideState === 2 ? "white" : "#DACCCD"}
+              transform="translate(4 4)"
+            />
+          </svg>
+        </div>
         <Slider {...settings}>
           {/* <div className="w-full h-[50vw] bg-bg1 bg-center bg-cover">a</div>
           <div className="bg-bg2 bg-center">b</div> */}
@@ -199,7 +255,6 @@ function App() {
           </p>
         </div>
       </div>
-      <div className="w-full h-[5vw] bg-white"></div>
 
       {/* <Camp /> */}
 
