@@ -107,6 +107,8 @@ function Class() {
         </div>
       </div>
 
+      <div className="w-full h-[5vw]"></div>
+
       <div className="w-full h-[65vw] bg-bgclass3 bg-center bg-no-repeat bg-cover flex flex-col justify-center align-middle">
         <h2 className="text-white text-[3vw] font-extrabold place-self-center justify-center text-center px-[10vw] leading-none">
           THE WORLD IS BECOMING A MORE AND MORE CHALLENGING PLACE DAILY
