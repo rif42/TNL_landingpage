@@ -37,38 +37,58 @@ function Team() {
         <Slider {...settings}>
           <div className="flex flex-row justify-center px-[0.5vw] h-[10vw] align-middle">
             <Link to="/team/nasser">
-              <img src={require("../assets/nasser.png")} alt={"Nasser"} />
+              <img src={require("../assets/0.png")} alt={"Nasser"} />
             </Link>
           </div>
           <div className="flex flex-row justify-center px-[0.5vw] h-[10vw] align-middle">
-            <img src={require("../assets/marc.png")} alt={"Marc"} />
+            <Link to="/team/marc">
+              <img src={require("../assets/1.png")} alt={"Marc"} />
+            </Link>
           </div>
           <div className="flex flex-row justify-center px-[0.5vw] h-[10vw] align-middle">
-            <img src={require("../assets/maureen.png")} alt={"Maureen"} />
+            <Link to="/team/maureen">
+              <img src={require("../assets/2.png")} alt={"Maureen"} />
+            </Link>
           </div>
           <div className="flex flex-row justify-center px-[0.5vw] h-[10vw] align-middle">
-            <img src={require("../assets/ira.png")} alt={"Ira"} />
+            <Link to="/team/ira">
+              <img src={require("../assets/3.png")} alt={"Ira"} />
+            </Link>
           </div>
           <div className="flex flex-row justify-center px-[0.5vw] h-[10vw] align-middle">
-            <img src={require("../assets/dave.png")} alt={"Dave"} />
+            <Link to="/team/dave">
+              <img src={require("../assets/4.png")} alt={"Dave"} />
+            </Link>
           </div>
           <div className="flex flex-row justify-center px-[0.5vw] h-[10vw] align-middle">
-            <img src={require("../assets/gabriel.png")} alt={"Gabriel"} />
+            <Link to="/team/gabriel">
+              <img src={require("../assets/5.png")} alt={"Gabriel"} />
+            </Link>
           </div>
           <div className="flex flex-row justify-center px-[0.5vw] h-[10vw] align-middle">
-            <img src={require("../assets/haidar.png")} alt={"haidar"} />
+            <Link to="/team/haidar">
+              <img src={require("../assets/6.png")} alt={"haidar"} />
+            </Link>
           </div>
           <div className="flex flex-row justify-center px-[0.5vw] h-[10vw] align-middle">
-            <img src={require("../assets/rifky0.png")} alt={"Rifky"} />
+            <Link to="/team/rifky">
+              <img src={require("../assets/7.png")} alt={"Rifky"} />
+            </Link>
           </div>
           <div className="flex flex-row justify-center px-[0.5vw] h-[10vw] align-middle">
-            <img src={require("../assets/rido.png")} alt={"rido"} />
+            <Link to="/team/rido">
+              <img src={require("../assets/8.png")} alt={"rido"} />
+            </Link>
           </div>
           <div className="flex flex-row justify-center px-[0.5vw] h-[10vw] align-middle">
-            <img src={require("../assets/khoirul.png")} alt={"Khoirul"} />
+            <Link to="/team/khoirul">
+              <img src={require("../assets/9.png")} alt={"Khoirul"} />
+            </Link>
           </div>
           <div className="flex flex-row justify-center px-[0.5vw] h-[10vw] align-middle">
-            <img src={require("../assets/imam.png")} alt={"imam"} />
+            <Link to="/team/imam">
+              <img src={require("../assets/10.png")} alt={"imam"} />
+            </Link>
           </div>
         </Slider>
       </div>

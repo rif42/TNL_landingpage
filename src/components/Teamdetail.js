@@ -1,11 +1,37 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { useState } from "react";
 
 function Teamdetail() {
   const { name } = useParams();
+  const [index, setIndex] = useState(
+    name === "nasser"
+      ? 0
+      : name === "marc"
+      ? 1
+      : name === "maureen"
+      ? 2
+      : name === "ira"
+      ? 3
+      : name === "dave"
+      ? 4
+      : name === "gabriel"
+      ? 5
+      : name === "haidar"
+      ? 6
+      : name === "rifky"
+      ? 7
+      : name === "rido"
+      ? 8
+      : name === "khoirul"
+      ? 9
+      : name === "imam"
+      ? 10
+      : null
+  );
 
-  const teamdesc = {
-    nasser: [
+  const teamdesc = [
+    [
       "Nasser Ahmad",
       "Coach Nasser has always been passionate about the kids who fall behind or are mistreated. An Ex Police Officer, World Traveler, Scuba Diver and now coach, he brings his visual and emotional global experience to the learners of today. Hard Knocks of life just became a way of life until he made the decision to take the lead to LIVE to WIN! A man with passion and purpose, Coach Nasser focuses on building your self esteem and confidence through his coaching process. Great footballer too!",
       "Coaching Strength: Team Building, Leadership and Social Emotional Learning",
@@ -13,7 +39,7 @@ function Teamdetail() {
       " li ",
       " fb ",
     ],
-    marc: [
+    [
       "Marc Grosse",
       "An Aircraft Engineer and Interior Designer in his past life, Coach Marc’s ability to empathize separates him from the crowd. He has dealt with the toughest people and situations in his life professionally, financially and personally that led him to come into the world of education to help others who are going through the tough time of life; kid or adult. Say it as it is, but in the best way that will reach you. Amazing 'Dancer'.",
       "Coaching Strengths: Team Building, Social Emotional Learning and Parent Coaching",
@@ -21,7 +47,7 @@ function Teamdetail() {
       " li ",
       " fb ",
     ],
-    maureen: [
+    [
       "Maureen Aquino",
       "A lover of great education is what she truly represents. Lifelong learning is something Maureen has embraced and she makes it clear that one has to be willing to learn till their very last day on earth. Maureen constantly seeks and builds amazing learning experiences, especially for the early learners. Enter any room and it will feel ALIVE only for one reason; it's because Maureen is there.",
       "Coaching Strengths: Parent Coaching and Early Childhood Education",
@@ -29,7 +55,7 @@ function Teamdetail() {
       " li ",
       " fb ",
     ],
-    ira: [
+    [
       "Ira Atiqah",
       "World Class Athlete, Design Thinker, Instructional Designer, Netball Coach, Co Founder, Entrepreneur and you just run out of adjectives to describe this powerhouse of a person. The fastest learner you will meet as it all comes naturally to her. As a young founder, she has been tested by the viciousness of the business and social worlds. She shares from her heart on how one should step up and step out! Crazy amazing athlete!",
       "Coaching Strengths: Leadership, Sports Peak Performance, Authentic Learning and Social Emotional Learning.",
@@ -37,7 +63,7 @@ function Teamdetail() {
       " li ",
       " fb ",
     ],
-    dave: [
+    [
       "Rahul Dave",
       "This man is all heart! His heart for the students of the world and his ability to inspire them is what defines Coach Dave. Not many will take the road less taken at a very young age. With all the uncertainties surrounding him, he took the leap of faith. Frustration, betrayal, cheating, losses surrounded him but his WILL to WIN took him forward and now, to greater heights. His sharing is from his heart. He is an Ultimate Athlete!",
       "Coaching Strengths: Leadership, Mindfulness, Sports Peak Performance, AGILE in Education, and Personal Mastery.",
@@ -45,7 +71,7 @@ function Teamdetail() {
       " li ",
       " fb ",
     ],
-    gabriel: [
+    [
       "Gabriel Suppiah",
       "The brain and the brawn. Coach Gabe has the ability to turn anything and everything into a classroom - his classroom without walls. He looks like a beast but he’s an actual softy - he takes the time to listen and understands without judgment. Being different has taken him to the highest of highs and lowest of lows. It’s all these experiences that makes him the Amazing Educator that he is today. There’s no doubt the kids in Score Campus adore him because of the love he shows every single day.",
       "Coaching Strengths: Phenomenon Based Learning, Social Emotional Learning, Leadership and Peak Performance Psychology.",
@@ -53,7 +79,7 @@ function Teamdetail() {
       " li ",
       " fb ",
     ],
-    haidar: [
+    [
       "Haidar Rais",
       "Leading the pack in Indonesia, Haidar is a highly sought after leader in software developments. He acts as the bridge between us, the educators, and the coding world. He dreams of creating the best ed-tech for students around the world. If there is anyone who embodies independence, it’s Haidar. He gives his teammate the confidence that he will get the job done regardless of how tough the assignment is.",
       " ",
@@ -61,7 +87,7 @@ function Teamdetail() {
       " li ",
       " fb ",
     ],
-    rifky: [
+    [
       "Rifky Ariya",
       "“I learnt English from gaming!” There’s no barrier that Rifky cannot overcome. He manages to unlearn and relearn because it needs to be done. He understands what is required of him to succeed and he goes all out to get it. Rifky dares to be vocal and different, and he inspires his teammates to do so too. ",
       " ",
@@ -69,7 +95,7 @@ function Teamdetail() {
       " li ",
       " fb ",
     ],
-    rido: [
+    [
       "Rido Fisabililah",
       "From a mere graphic designer to an in-house UI/UX designer, Rido has set the bar high for himself when it comes to designing the world’s best educational technology. He has also earned himself a “Fantastic Teammate” badge for being open to learning, willing to push boundaries and being the best at what he does.",
       " ",
@@ -77,7 +103,7 @@ function Teamdetail() {
       " li ",
       " fb ",
     ],
-    khoirul: [
+    [
       "Khoirul Badarudin",
       "As a back-end developer, it's appropriate that he likes things that train logic and algorithms. Besides his profile which is very addicted to technology, he really likes sports, he likes to play football even though his body is not suited for sport.",
       " ",
@@ -85,7 +111,7 @@ function Teamdetail() {
       " li ",
       " fb ",
     ],
-    imam: [
+    [
       "Imam Daru",
       "When there’s nothing much to do, you can find Imam working on his programming skills, reading, or even traveling. His indomitable spirit inspires him to constantly work on developing himself. Imam is also known to have a spontaneous and adventurous persona.",
       " ",
@@ -93,25 +119,26 @@ function Teamdetail() {
       " li ",
       " fb ",
     ],
-  };
+  ];
   return (
     <>
       <div className="flex flex-col w-full h-[48vw] justify-center bg-teambg0 bg-center bg-cover align-middle">
-        <div className="flex flex-row w-[20vw] h-[3vw] pt-[3vw] items-center content-center justify-center align-middle">
+        <div className="flex flex-row w-[15vw] h-[3vw] ml-[2vw] pt-[3vw] items-center content-center justify-evenly align-middle">
+          <Link to="/team">
+            <svg
+              className="mb-[0.3vw] hover:cursor-pointer"
+              width="1.5vw"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.8359 7.58292L7.41502 2.162C7.30563 2.05264 7.15728 1.99121 7.0026 1.99121C6.84792 1.99121 6.69958 2.05264 6.59019 2.162L1.16927 7.58292H2.33594V12.2496C2.33594 12.4043 2.39739 12.5527 2.50679 12.6621C2.61619 12.7715 2.76456 12.8329 2.91927 12.8329H5.83594V8.74959H8.16927V12.8329H11.0859C11.2406 12.8329 11.389 12.7715 11.4984 12.6621C11.6078 12.5527 11.6693 12.4043 11.6693 12.2496V7.58292H12.8359Z"
+                fill="black"
+              />
+            </svg>
+          </Link>
           <svg
-            className="place-self-center"
-            width="1.5vw"
-            viewBox="0 0 14 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M12.8359 7.58292L7.41502 2.162C7.30563 2.05264 7.15728 1.99121 7.0026 1.99121C6.84792 1.99121 6.69958 2.05264 6.59019 2.162L1.16927 7.58292H2.33594V12.2496C2.33594 12.4043 2.39739 12.5527 2.50679 12.6621C2.61619 12.7715 2.76456 12.8329 2.91927 12.8329H5.83594V8.74959H8.16927V12.8329H11.0859C11.2406 12.8329 11.389 12.7715 11.4984 12.6621C11.6078 12.5527 11.6693 12.4043 11.6693 12.2496V7.58292H12.8359Z"
-              fill="black"
-            />
-          </svg>
-          <svg
-            className="place-self-center ml-[1vw]"
             width="1.5vw"
             fill="none"
             viewBox="0 0 24 24"
@@ -126,23 +153,63 @@ function Teamdetail() {
             />
           </svg>
           <p className="font-montserrat text-[1vw] place-self-center pl-[1vw]">
-            {teamdesc[name][0]}
+            {teamdesc[index][0]}
           </p>
         </div>
+        <svg
+          onClick={() => setIndex(index - 1)}
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          className={
+            index === 0
+              ? "hidden"
+              : "w-[3vw] absolute place-self-start bg-gray-300 rounded-full ml-[1vw] p-[0.5vw]"
+          }
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+
         <img
           className="absolute place-self-end w-[25vw] ml-[-7vw]"
-          src={require(`../assets/${name}.png`)}
+          src={require(`../assets/${index}.png`)}
           alt={name}
         />
+        <svg
+          onClick={() => setIndex(index + 1)}
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          className={
+            index === 10
+              ? "hidden"
+              : "w-[3vw] absolute place-self-end bg-gray-300 rounded-full ml-[-1vw] p-[0.5vw]"
+          }
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+
         <h2 className="font-montserrat text-black text-[4vw] font-extrabold pt-[5vw] pl-[8vw]">
-          {teamdesc[name][0]}
+          {teamdesc[index][0]}
         </h2>
-        <p className="font-montserrat text-[1.1vw] leading-relaxed font-semibold pl-[8vw] pt-[2vw] pr-[40vw]">
-          {teamdesc[name][1]}
+        <p className="font-montserrat text-[1.1vw] font-semibold pl-[8vw] pt-[2vw] pr-[40vw]">
+          {teamdesc[index][1]}
         </p>
 
         <p className="font-montserrat text-[1.1vw] leading-relaxed font-extrabold pl-[8vw] pt-[2vw] pr-[40vw]">
-          {teamdesc[name][2]}
+          {teamdesc[index][2]}
         </p>
 
         <div className="flex flex-row ml-[5.5vw] w-[15vw] h-[3vw] pt-[5vw] items-center content-center justify-evenly align-middle pb-[8vw]">
