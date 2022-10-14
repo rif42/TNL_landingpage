@@ -1,11 +1,7 @@
-.slick-next {
-    width: 10vw;
-    height:10vw;
-    font-size: 10vw;
-    z-index: 50;
-}
-
-.slick-prev {
-    block-size: 10vw;
-    z-index: 50;
-}
+.slick-next:before, .slick-prev:before {
+    font-size:3.5vw;
+    width:10vw;
+    height:5vw;
+    color: #181434;
+    opacity: 100%;
+};

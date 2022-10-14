@@ -1,6 +1,15 @@
 import React from "react";
 import Slider from "react-slick";
 import customcss from "./arrows.css";
+import Teamdetail from "./Teamdetail";
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Switch,
+  Link,
+  Route,
+} from "react-router-dom";
 
 var settings = {
   dots: false,
@@ -25,9 +34,11 @@ function Team() {
           empowering you to ask the questions that matter.
         </p>
 
-        <Slider style={customcss} {...settings}>
+        <Slider {...settings}>
           <div className="flex flex-row justify-center px-[0.5vw] h-[10vw] align-middle">
-            <img src={require("../assets/nasser.png")} alt={"Nasser"} />
+            <Link to="/team/nasser">
+              <img src={require("../assets/nasser.png")} alt={"Nasser"} />
+            </Link>
           </div>
           <div className="flex flex-row justify-center px-[0.5vw] h-[10vw] align-middle">
             <img src={require("../assets/marc.png")} alt={"Marc"} />
@@ -61,8 +72,6 @@ function Team() {
           </div>
         </Slider>
       </div>
-
-      <button onClick={{}}>LMAOOOOOOO</button>
     </>
   );
 }

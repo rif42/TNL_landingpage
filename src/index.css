@@ -13,11 +13,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.slick-next{
-  width: 300px;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.slick-next{
+  z-index: 10;
+  width: 5vw;
+  height: 5vw;
+  margin-top: 12vw;
+  margin-right: 44vw;
+}
+
+.slick-prev{
+  z-index: 10;
+  width: 5vw;
+  height: 5vw;
+  margin-top: 12vw;
+  margin-left:44vw;
 }

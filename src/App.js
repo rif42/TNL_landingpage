@@ -6,6 +6,7 @@ import Gradient from "rgt";
 import Class from "./components/Class";
 import Slider from "react-slick";
 import Team from "./components/Team";
+import Teamdetail from "./components/Teamdetail";
 import {
   BrowserRouter as Router,
   Routes,
@@ -338,6 +339,7 @@ function App() {
         <Route path="/camp" element={<Camp />} />
         <Route path="/class" element={<Class />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/team/:name" element={<Teamdetail />} />
       </Routes>
     </Router>
   );
