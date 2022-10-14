@@ -1059,18 +1059,18 @@ function Camp() {
         <div className="hover:cursor-pointer absolute place-self-center place-items-center rounded-full mt-[37vw] ml-[30vw] px-[5vw] py-[0.5vw] bg-[#05194A] text-white text-[1.1vw]">
           <a
             href="##"
-            onClick={() =>
-              console.log({
-                childname,
-                schoolname,
-                pnumber,
-                parentsname,
-                childrenage,
-                country,
-                email,
-                input,
-              })
-            }
+            // onClick={() =>
+            //   console.log({
+            //     childname,
+            //     schoolname,
+            //     pnumber,
+            //     parentsname,
+            //     childrenage,
+            //     country,
+            //     email,
+            //     input,
+            //   })
+            // }
           >
             Register
           </a>

@@ -1,0 +1,11 @@
+.slick-next {
+    width: 10vw;
+    height:10vw;
+    font-size: 10vw;
+    z-index: 50;
+}
+
+.slick-prev {
+    block-size: 10vw;
+    z-index: 50;
+}

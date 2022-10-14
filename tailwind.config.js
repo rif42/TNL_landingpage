@@ -35,6 +35,7 @@ module.exports = {
         bgclass: "url('/src/assets/bgclass.jpg')",
         bgclass3: "url('/src/assets/bgclass3.jpg')",
         bgclass6: "url('/src/assets/bgclass6.jpg')",
+        teambg0: "url('/src/assets/teambg0.jpg')",
       },
       // colors: {
       //   'test': 'linear-gradient(red, yellow)',

@@ -17,7 +17,7 @@ import {
 import "./App.css";
 
 function App() {
-  const [slideState, setSlideState] = useState(2);
+  const [slideState, setSlideState] = useState(0);
   const [navState, setNavState] = useState("Home");
   const [selectionState, setSelectionState] = useState(0);
   const [quoteState, setquoteState] = useState(0);
@@ -35,6 +35,9 @@ function App() {
 
   return (
     <Router>
+      {/* <div className="text-[5vw]">
+        {navState} {selectionState}
+      </div> */}
       <div className="App">
         <div className="Navbar-container align-middle bg-[#191434] place-content-center place-items-center flex-row inline-flex justify-even w-full h-[4vw] sticky top-0 z-50">
           <img
@@ -47,15 +50,15 @@ function App() {
           />
 
           <Link to="/">
-            <a
+            <div
               onClick={() => {
                 setNavState("Home");
               }}
-              className="flex hover:cursor-pointer bg-gradient-to-r from-[#FC5229] to-[#AF067D] font-montserrat font-medium text-white text-[0.9vw] tracking-wide place-self-center place-content-center place-items-center justify-center align-middle rounded-xl px-[2vw] w-fit h-[2.5vw]"
+              className="flex hover:cursor-pointer bg-gradient-to-r from-[#FC5229] to-[#AF067D] font-montserrat font-medium text-white text-[0.9vw] tracking-wide place-self-center place-content-center place-items-center justify-center align-middle rounded-xl px-[2vw] mr-[3vw] w-fit h-[2.5vw]"
               href="##"
             >
               THE NEXT LEVEL CAMP
-            </a>
+            </div>
           </Link>
 
           <Link to="/team">
@@ -244,7 +247,7 @@ function App() {
               {selectionState === 0 ? (
                 <p className="text-[2vw] font-bold text-center px-[5vw] py-[3vw] h-[20vw] leading-tight ">
                   {slideState === 0 ? (
-                    <p>
+                    <span>
                       Junior Camp, 6-10 years old <br />
                       <span className="text-[1.5vw]">
                         12th to 16th December 2022
@@ -255,7 +258,7 @@ function App() {
                       <span className="text-[1.5vw]">
                         12th to 18th December 2022
                       </span>
-                    </p>
+                    </span>
                   ) : slideState === 1 ? (
                     "The Perfect Bridge between the students’ academic learning and the real world."
                   ) : slideState === 2 ? (
@@ -310,10 +313,15 @@ function App() {
           <Link to={"/"}>
             <Home />
           </Link>
-        ) : // <Home />
-        null}
+        ) : (
+          <div></div>
+        )}
 
-        {navState === "Team" ? <Team /> : null}
+        {/* {navState === "Team" ? (
+          <Link to={"/team"}>
+            <Team />
+          </Link>
+        ) : null} */}
         {/* <Camp /> */}
 
         {/* {navState === "Event" ? <Event /> : null} */}
@@ -329,7 +337,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/camp" element={<Camp />} />
         <Route path="/class" element={<Class />} />
-        <Route exact path="/team" element={<Team />} />
+        <Route path="/team" element={<Team />} />
       </Routes>
     </Router>
   );
