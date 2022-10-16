@@ -7,6 +7,8 @@ import Class from "./components/Class";
 import Slider from "react-slick";
 import Team from "./components/Team";
 import Teamdetail from "./components/Teamdetail";
+import Privacypolicy from "./components/Privacypolicy";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -77,18 +79,20 @@ function App() {
             </div>
           </Link>
 
-          <div
-            onClick={() => {
-              setNavState("ContactUs");
-            }}
-            className={
-              navState === "Contact Us"
-                ? "font-montserrat font-medium flex text-center mx-auto my-auto text-[0.9vw] tracking-wide text-white cursor-pointer underline decoration-2 underline-offset-4 decoration-red-400 pr-[15vw]"
-                : "font-montserrat font-medium flex text-center mx-auto my-auto text-[0.9vw] tracking-wide text-white cursor-pointer pr-[15vw]"
-            }
-          >
-            Contact Us
-          </div>
+          <Link to="/privacy">
+            <div
+              onClick={() => {
+                setNavState("ContactUs");
+              }}
+              className={
+                navState === "Contact Us"
+                  ? "font-montserrat font-medium flex text-center px-[5vw] my-auto text-[0.9vw] tracking-wide text-white cursor-pointer underline decoration-2 underline-offset-4 decoration-red-400 pr-[15vw]"
+                  : "font-montserrat font-medium flex text-center px-[5vw] my-auto text-[0.9vw] tracking-wide text-white cursor-pointer pr-[15vw]"
+              }
+            >
+              Contact Us
+            </div>
+          </Link>
         </div>
         {navState === "Home" ? (
           <div className="w-full h-fit absolute ">
@@ -338,6 +342,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/camp" element={<Camp />} />
         <Route path="/class" element={<Class />} />
+        <Route path="/privacy" element={<Privacypolicy />} />
         <Route path="/team" element={<Team />} />
         <Route path="/team/:name" element={<Teamdetail />} />
       </Routes>
