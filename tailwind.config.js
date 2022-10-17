@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         montserrat: ["Montserrat", "serif"],
+        inter: ["Inter", "serif"],
       },
       backgroundImage: {
         bg5: "url('/src/assets/bg5.jpg')",
@@ -36,6 +37,10 @@ module.exports = {
         bgclass3: "url('/src/assets/bgclass3.jpg')",
         bgclass6: "url('/src/assets/bgclass6.jpg')",
         teambg0: "url('/src/assets/teambg0.jpg')",
+        tfs0: "url('/src/assets/tfs0.jpg')",
+        tfs1: "url('/src/assets/tfs1.jpg')",
+        tfs2: "url('/src/assets/tfs2.jpg')",
+        tfs3: "url('/src/assets/tfs3.jpg')",
       },
       // colors: {
       //   'test': 'linear-gradient(red, yellow)',
