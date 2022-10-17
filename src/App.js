@@ -20,6 +20,11 @@ import {
 import "./App.css";
 
 function App() {
+  //TODO:
+  // 1. Make first slide the proper order
+  // 2. Make the rest of the content only appear after clicking LEARN MORE
+  // 3. Make the default content appear correctly
+
   const [slideState, setSlideState] = useState(0);
   const [navState, setNavState] = useState("Home");
   const [selectionState, setSelectionState] = useState(0);
@@ -201,17 +206,12 @@ function App() {
                 />
               </svg>
             </div>
+            <div className="w-[10vw] h-[3vw] absolute place-self-end z-50 text-[1.5vw] underline text-blue-400 ml-[67.6vw] mt-[42vw]">
+              Learn More
+            </div>
             <Slider {...settings}>
-              {/* <div className="w-full h-[50vw] bg-bg1 bg-center bg-cover">a</div>
-          <div className="bg-bg2 bg-center">b</div> */}
-
-              <div className="w-full h-[45vw] bg-bg3 bg-center bg-cover z-0">
+              <div className="w-full h-[45vw] bg-bg1 bg-center bg-cover z-0">
                 <h1 className="text-white text-[4vw] mt-[15vw] w-[50vw] font-extrabold text-center ">
-                  THE NEXT LEVEL LEADERSHIP CAMP
-                </h1>
-              </div>
-              <div className="w-full h-[45vw] bg-bg1 bg-center bg-cover  z-0">
-                <h1 className="text-white text-[4vw] mt-[15vw] w-[50vw] font-extrabold text-center">
                   CLASSROOM WITHOUT WALLS
                 </h1>
               </div>
@@ -220,16 +220,21 @@ function App() {
                   THE FIRST STEP
                 </h1>
               </div>
+              <div className="w-full h-[45vw] bg-bg3 bg-center bg-cover  z-0">
+                <h1 className="text-white text-[4vw] mt-[15vw] w-[50vw] font-extrabold text-center">
+                  THE NEXT LEVEL LEADERSHIP CAMP
+                </h1>
+              </div>
             </Slider>
 
             <div className="w-[45vw] h-[40vw] absolute flex flex-col justify-center ml-[50vw] mt-[-38vw] bg-white rounded-3xl z-10 overflow-hidden">
               <h2 className=" text-[#19103D] text-[4vw] font-extrabold text-center px-[3vw] leading-none pb-[2vw]">
                 {slideState === 0
-                  ? "The Next Level Leadership Camp"
-                  : slideState === 1
                   ? "Classroom Without Walls"
-                  : slideState === 2
+                  : slideState === 1
                   ? "The First Step"
+                  : slideState === 2
+                  ? "The Next Level Leadership Camp"
                   : null}
               </h2>
               <div className="flex flex-row justify-center place-self-center place-content-center align-middle w-[20vw]">
@@ -285,6 +290,10 @@ function App() {
               {selectionState === 0 ? (
                 <p className="text-[2vw] font-bold text-center px-[5vw] py-[3vw] h-[20vw] leading-tight ">
                   {slideState === 0 ? (
+                    "The Perfect Bridge between the students’ academic learning and the real world."
+                  ) : slideState === 1 ? (
+                    "It is exactly as it says; The First Step! It is all you and this can potentially be one of the toughest 8 hours you would have spent in your life."
+                  ) : slideState === 2 ? (
                     <span>
                       Junior Camp, 6-10 years old <br />
                       <span className="text-[1.5vw]">
@@ -297,10 +306,6 @@ function App() {
                         12th to 18th December 2022
                       </span>
                     </span>
-                  ) : slideState === 1 ? (
-                    "The Perfect Bridge between the students’ academic learning and the real world."
-                  ) : slideState === 2 ? (
-                    "It is exactly as it says; The First Step! It is all you and this can potentially be one of the toughest 8 hours you would have spent in your life."
                   ) : null}
                 </p>
               ) : selectionState === 1 ? (
@@ -308,9 +313,9 @@ function App() {
                   {" "}
                   <p className="text-[2vw] font-bold text-center leading-tight pt-[3vw] ">
                     {slideState === 0
-                      ? "Once a year, a child or a teen must leave the comfort of home and luxury and go to a place called THE NEXT LEVEL CAMP, to answer the tough questions of life to GROW!"
-                      : slideState === 1
                       ? "The Perfect Bridge between the students’ academic learning and the real world."
+                      : slideState === 1
+                      ? "Once a year, a child or a teen must leave the comfort of home and luxury and go to a place called THE NEXT LEVEL CAMP, to answer the tough questions of life to GROW!"
                       : slideState === 2
                       ? "It is exactly as it says; The First Step! It is all you and this can potentially be one of the toughest 8 hours you would have spent in your life."
                       : null}
@@ -333,7 +338,713 @@ function App() {
           </div>
         ) : null}
 
-        {navState === "Home" && slideState === 0 ? (
+        {/* {navState === "Home" && slideState === 0 ? (
+          <div className="home-page flex flex-col w-full h-fit">
+            <div className="w-full h-[50vw] bg-white"></div>
+
+            <div className="w-full h-fit flex flex-col bg-white">
+              <h2 className=" absolute place-self-center justify-center text-[#19103D] text-[4vw] font-extrabold text-center leading-none px-[15vw]">
+                These are such tough times to be a parent
+              </h2>
+              <div
+                className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
+          mt-[10vw] ml-[15vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
+              >
+                Schools have gotten harder.
+              </div>
+              <div
+                className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
+          mt-[14vw] ml-[7vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
+              >
+                The bad elements of social media are<br></br>victimizing our
+                children
+              </div>
+              <div
+                className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
+          mt-[20vw] ml-[10vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
+              >
+                They have become more dependent and<br></br>entitled than ever
+                before
+              </div>
+              <div
+                className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
+          mt-[26vw] ml-[10vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
+              >
+                They have become reclusive
+              </div>
+              <div
+                className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
+          mt-[11vw] ml-[55vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
+              >
+                We have all becomes addicts of technology<br></br>(mostly the
+                phone)
+              </div>
+              <div
+                className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
+          mt-[18vw] ml-[60vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
+              >
+                It is so difficult to understand their needs
+              </div>
+              <div
+                className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
+          mt-[23vw] ml-[67vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
+              >
+                Gaming world is larger than ever and is<br></br>sucking our kids
+                in
+              </div>
+              <div className="absolute flex flex-col justify-end w-[45vw] h-fit place-self-end mt-[80%] mr-[5%]">
+                <h2 className=" text-white text-[3vw] font-bold text-right leading-tight">
+                  It’s tough. We see it. We now both need to agree that more has
+                  to be done
+                </h2>
+                <p className="text-white text-[1vw] font-semibold text-right pb-[2vw] pt-[1vw] pl-[17vw]">
+                  This cannot be done by you alone. You need a group of people
+                  dedicated to the growth and excellence of your children.
+                </p>
+                <a
+                  className="flex hover:cursor-pointer bg-gradient-to-r from-[#FC5229] to-[#AF067D] font-extrabold text-white text-[1.1vw] tracking-wide place-self-end place-content-center place-items-center justify-center align-middle rounded-xl px-[2vw] w-fit h-[2.5vw]"
+                  href="##"
+                >
+                  GET IN TOUCH
+                </a>
+              </div>
+              <img
+                className="flex object-contain w-full mt-[10vw]"
+                src={require("./assets/bg4.jpg")}
+                alt={"background4"}
+              />
+            </div>
+
+            <div className="flex flex-col w-full h-[40vw] bg-bg5 bg-center bg-cover justify-center">
+              <img
+                className="absolute mt-[-13%] place-self-end w-[15vw]"
+                src={require("./assets/icomma.jpg")}
+                alt={"decoration"}
+              />
+              <p className="text-[#190539]  font-medium text-[1.2vw] flex flex-col text-left px-[18vw]">
+                I am going to be honest here. Working with Coach Gabe was a
+                challenge. Matthew got 5/100 for all his subjects when I brought
+                him to Coach. Matthew was on medication for ADHD and the school
+                had nothing but complaints about him.<br></br> <br></br> Coach
+                Gabe told me that he would do his best. This was Matt’s PSLE
+                year and we went to Score Campus in June. Results came and he
+                got 225. We were speechless for an hour. I asked Matt, how did
+                he do this?<br></br> <br></br> He replied, The coaches built me
+                a table to stand and do my work. Every time I got a right
+                answer, he gave hugs, high fives and a genius cookie.”
+              </p>
+              <p
+                style={{
+                  "text-shadow":
+                    "-2px -2px 0 #FF5C00,2px -2px 0 #FF5C00,-2px 2px 0 #FF5C00, 2px 2px 0 #FF5C00",
+                }}
+                className="text-[2vw] italic text-white tracking-wide px-[18vw] text-left pt-[3vw] font-extrabold"
+              >
+                Matthew, son of Serene
+              </p>
+            </div>
+
+            <div className="flex flex-col w-full h-[54vw] bg-ellips bg-center bg-cover bg-no-repeat justify-center z-10">
+              <h2 className="text-center text-white text-[3vw] font-extrabold ">
+                WHY US AND WHO ARE WE?
+              </h2>
+              <p className="text-center text-white text-[1.1vw] font-bold px-[15vw] pt-[3vw]">
+                This is simple.{" "}
+                <span className="text-black text-[1.2vw]">
+                  We do what we do, so that you can completely enjoy being a
+                  parent at home.
+                </span>{" "}
+                Let’s be honest. You have 18 years at this before they grow
+                wings and fly. How do you want them to remember this? Food for
+                thought!
+              </p>
+              <p
+                style={{
+                  "text-shadow":
+                    "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
+                }}
+                className="text-[3vw] text-[#F5AA4D] px-[15vw] text-center pt-[3vw] font-extrabold"
+              >
+                NOW, TO SCORE CAMPUS.
+              </p>
+              <p className="text-center text-white text-[1.1vw] font-bold px-[15vw] pt-[1vw]">
+                My goodness! What a journey it has been?
+              </p>
+              <div className="inline-flex flex-row justify-around align-middle content-center w-[70vw] pb-[8vw] place-self-center pt-[5vw]">
+                <div className="flex flex-col justify-center align-middle">
+                  <p className="text-center text-white text-[1.1vw] font-bold ">
+                    More than a
+                  </p>
+
+                  <p
+                    style={{
+                      "text-shadow":
+                        "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
+                    }}
+                    className="text-[5vw] text-[#F7AF4D] text-center font-extrabold"
+                  >
+                    100
+                  </p>
+
+                  <p className="text-center text-white text-[1.1vw] font-bold ">
+                    cities over 12 countries
+                  </p>
+                </div>
+                <div className="flex flex-col justify-center align-middle">
+                  <p className="text-center text-white text-[1.1vw] font-bold ">
+                    More than
+                  </p>
+
+                  <p
+                    style={{
+                      "text-shadow":
+                        "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
+                    }}
+                    className="text-[5vw] text-[#F7AA4E] text-center font-extrabold"
+                  >
+                    200,000
+                  </p>
+
+                  <p className="text-center text-white text-[1.1vw] font-bold ">
+                    students
+                  </p>
+                </div>
+                <div className="flex flex-col justify-center align-middle">
+                  <p className="text-center text-white text-[1.1vw] font-bold ">
+                    More than
+                  </p>
+
+                  <p
+                    style={{
+                      "text-shadow":
+                        "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
+                    }}
+                    className="text-[5vw] text-[#F5A752] text-center font-extrabold"
+                  >
+                    15,000
+                  </p>
+
+                  <p className="text-center text-white text-[1.1vw] font-bold ">
+                    teachers
+                  </p>
+                </div>
+                <div className="flex flex-col justify-center align-middle">
+                  <p className="text-center text-white invisible text-[1.1vw] font-bold ">
+                    {"aaaa"}
+                  </p>
+
+                  <p
+                    style={{
+                      "text-shadow":
+                        "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
+                    }}
+                    className="text-[5vw] text-[#F4A354] text-center font-extrabold"
+                  >
+                    27
+                  </p>
+
+                  <p className="text-center text-white text-[1.1vw] font-bold ">
+                    years
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full h-[50vw]">
+              <img
+                className="absolute w-[100%] mt-[-9vw] z-[-1]"
+                src={require("./assets/component2.jpg")}
+                alt={"bgcomponent"}
+              />
+
+              <p className="text-center text-black text-[1.5vw] font-medium pt-[5vw] ">
+                Our Coaching Philosophy :
+              </p>
+              <p className="text-center text-black text-[3vw] font-extrabold pt-[3vw] ">
+                Learning is a change in behaviour as a<br></br>result of an
+                experience.
+              </p>
+              <div className="inline-flex flex-row justify-center align-middle">
+                <p className="text-center text-black text-[1.5vw] font-medium pt-[5vw] ">
+                  Powered by <span className="invisible">-</span>
+                </p>
+                <a
+                  className="flex hover:cursor-pointer bg-gradient-to-r from-[#2795D1] to-[#F44839] place-self-end place-content-center place-items-center justify-center align-middle rounded-full px-[3vw] w-fit h-[2.5vw]"
+                  href="web.scorecampus.com"
+                >
+                  <div className="flex flex-col text-center font-semibold tracking-wide justify-center align-middle place-self-center bg-white rounded-full text-[1.1vw] mx-[-2.9vw] w-[10vw] h-[2.3vw]">
+                    Scorecampus.com
+                  </div>
+                </a>
+
+                <p className="text-center text-black text-[1.5vw] font-medium pt-[5vw] ">
+                  <span className="invisible">-</span> and{" "}
+                  <span className="invisible">-</span>
+                </p>
+
+                <a
+                  className="flex hover:cursor-pointer bg-gradient-to-r from-[#2795D1] to-[#F44839] place-self-end place-content-center place-items-center justify-center align-middle rounded-full px-[3vw] w-fit h-[2.5vw]"
+                  href="web.scorecampus.com"
+                >
+                  <div className="flex flex-col text-center font-semibold tracking-wide justify-center align-middle place-self-center bg-white rounded-full text-[1.1vw] mx-[-2.9vw] w-[10vw] h-[2.3vw]">
+                    Let's Fl!p app
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div className="flex flex-col place-content-center place-items-end justify-center w-full h-[35vw] bg-bg6 bg-center bg-cover bg-no-repeat">
+              <h2 className=" text-white text-[3vw] font-bold text-left leading-tight pr-[3vw] w-[45vw]">
+                So, what is this all about and how can we work together?
+              </h2>
+              <p className="text-left text-white text-[1.1vw] pr-[3vw] w-[45vw] font-medium pt-[1vw]">
+                For a start, let’s meet over coffee and talk. But for now, we
+                have <br></br>
+                described in brief what we do for every child.
+              </p>
+              <a
+                className="flex hover:cursor-pointer bg-gradient-to-r from-[#FC5229] to-[#AF067D] font-extrabold text-white text-[1.1vw] tracking-wide place-items-center mr-[33vw] mt-[3vw] rounded-full px-[2vw] w-fit h-[2.5vw]"
+                href="##"
+              >
+                GET IN TOUCH
+              </a>
+            </div>
+
+            <div className="flex flex-col w-full h-[200vw] bg-component4 bg-center bg-cover bg-no-repeat">
+              <div className="flex flex-col w-[45vw] ml-[12vw] mt-[10vw] h-fit">
+                <p className="text-left text-[#05194A] text-[1.1vw] font-medium">
+                  The complete Score Campus experience
+                </p>
+                <h2 className="text-left text-[#05194A] text-[2.5vw] font-bold leading-none tracking-tighter pt-[1vw]">
+                  Sounds very cliche but it all starts within the perimeters of
+                  Love and Tough Love
+                </h2>
+                <p className="text-left text-[#05194A] text-[1.1vw] font-medium pt-[1vw] w-[90%]">
+                  At Score Campus, it gets as real as it gets. It is student
+                  driven. They are on the driver’s seat and we are the guides.
+                  They have dreams and they want to succeed. We just need to
+                  listen to them!
+                </p>
+                <h2 className="text-left text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighter pt-[1vw] w-[80%]">
+                  6 Months Coaching Relationship for a start (Start and end date
+                  is highly customizable)
+                </h2>
+              </div>
+
+              <div
+                className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
+         place-self-end mt-[-5vw] mr-[10vw]"
+              >
+                <img
+                  className="w-[12vw] place-self-center"
+                  src={require("./assets/card1.png")}
+                  alt={"the first step"}
+                />
+                <h2 className="text-left pl-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
+                  The First Step
+                </h2>
+                <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
+                  There are 38 values, attributes and characteristics that you
+                  must know about your children. It is designed for kids above
+                  10 but you will be surprised by the outcomes.
+                </p>
+              </div>
+
+              <div
+                className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
+         place-self-start ml-[10vw]"
+              >
+                <img
+                  className="w-[12vw] place-self-center"
+                  src={require("./assets/card2.png")}
+                  alt={"Assigned to a coach"}
+                />
+                <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
+                  Assigned to a coach
+                </h2>
+                <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
+                  For academic planning for English, Maths and Science
+                </p>
+              </div>
+
+              <div
+                className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
+         place-self-end mt-[-10vw] mr-[25vw]"
+              >
+                <img
+                  className="w-[20vw] place-self-center"
+                  src={require("./assets/card3.png")}
+                  alt={"Weekdays are for academic coaching"}
+                />
+                <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
+                  Weekdays are for academic coaching
+                </h2>
+                <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
+                  In campus or online. We do this though the Let’s Flip App and
+                  www.scorecampus.com
+                </p>
+              </div>
+
+              <div
+                className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
+         place-self-start mt-[-5vw] ml-[5vw]"
+              >
+                <img
+                  className="w-[12vw] place-self-center"
+                  src={require("./assets/card4.png")}
+                  alt={"Saturdays are for character development"}
+                />
+                <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
+                  Saturdays are for character development
+                </h2>
+                <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
+                  Skills and Project Work.
+                </p>
+              </div>
+
+              <div
+                className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
+         place-self-end mt-[-10vw] mr-[13vw]"
+              >
+                <img
+                  className="w-[12vw] place-self-center"
+                  src={require("./assets/card5.png")}
+                  alt={"The Next Level Camp"}
+                />
+                <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
+                  The Next Level Camp
+                </h2>
+                <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
+                  5 to 7 days of an experience that every child in the world
+                  must go for. More details in the page.
+                </p>
+              </div>
+
+              <div
+                className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
+         place-self-start mt-[-5vw] ml-[30vw]"
+              >
+                <img
+                  className="w-[12vw] place-self-center"
+                  src={require("./assets/card6.png")}
+                  alt={"Classroom Without Walls"}
+                />
+                <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
+                  Classroom Without Walls
+                </h2>
+                <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
+                  4 days Project Management Experience that bridges your
+                  academic world to the corporate experience.
+                </p>
+              </div>
+
+              <div
+                className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
+         place-self-end mt-[-5vw] mr-[8vw]"
+              >
+                <img
+                  className="w-[12vw] place-self-center"
+                  src={require("./assets/card7.png")}
+                  alt={"Competitive Sports"}
+                />
+                <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
+                  Competitive Sports
+                </h2>
+                <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
+                  Sports reveals character and we build on them
+                </p>
+              </div>
+              <a
+                className="flex hover:cursor-pointer bg-gradient-to-r from-[#FC5229] to-[#AF067D] font-extrabold text-white text-[3vw] tracking-wide place-items-center rounded-full mt-[5vw] mx-auto px-[4vw] w-fit h-[6vw]"
+                href="##"
+              >
+                GET IN TOUCH
+              </a>
+            </div>
+
+            <div className="flex flex-col justify-center w-full h-[40vw] ">
+              <img
+                className=" absolute w-[80vw] place-self-center z-0"
+                src={require("./assets/bghome1.jpg")}
+                alt={"background pic"}
+              />
+              <h2 className="text-center place-self-center text-white text-[2.5vw] font-bold leading-none tracking-tighter w-[60vw] z-10">
+                We built this entire EcoSystem based on Love.
+              </h2>
+              <p className="text-center place-self-center px-[3vw] text-white text-[1.1vw] font-medium w-[60vw] pt-[2vw] z-10">
+                One might think that this is mushy talk but I challenge you to
+                come see the family we have here. Everything here is built as a
+                model for schools to follow. Come visit with us!
+              </p>
+              <a
+                className="flex hover:cursor-pointer bg-gradient-to-r from-[#FC5229] to-[#AF067D] font-extrabold text-white text-[1.1vw] tracking-wide place-self-center place-content-center place-items-center rounded-full justify-center align-middle mt-[2vw] px-[2vw] w-fit h-[2.5vw] z-10"
+                href="##"
+              >
+                GET IN TOUCH
+              </a>
+            </div>
+          </div>
+        ) : navState === "Home" && slideState === 1 ? (
+          <div className="class-page flex flex-col w-full h-fit">
+            <div className="w-full h-[50vw]"></div>
+
+            <div className="w-full h-[65vw] bg-bgclass3 bg-center bg-no-repeat bg-cover flex flex-col justify-center align-middle">
+              <h2 className="text-white text-[3vw] font-extrabold place-self-center justify-center text-center px-[10vw] leading-none">
+                THE WORLD IS BECOMING A MORE AND MORE CHALLENGING PLACE DAILY
+              </h2>
+              <p className="text-white text-[1.5vw] font-medium place-self-center justify-center text-center px-[25vw] leading-none pt-[1vw]">
+                and it is crucial that we bring experience that conditions our
+                young winners to take on the unknown.
+              </p>
+            </div>
+
+            <div className="w-full h-[40vw] flex flex-col ">
+              <p className="text-[#19103D] text-[1.5vw] font-medium px-[10vw] leading-none pt-[5vw]">
+                The Classroom Without Walls 4 days and 3 nights camp built to
+                introduce, hone and showcase the skills, attributes and
+                excellence that will take our young leaders on the path to
+                vocational greatness, when they are of age
+              </p>
+
+              <h2 className="text-[#19103D]  text-[3vw] font-extrabold text-center px-[12vw] pt-[5vw]">
+                For the 4 days and 3 nights, they are locked in “The Village”
+                where they have to
+              </h2>
+
+              <img
+                className="place-self-center pt-[5vw] w-[70%]"
+                src={require("./assets/bgclass5.jpg")}
+                alt={"background1"}
+              />
+            </div>
+
+            <div className="w-full h-fit flex flex-col pt-[10vw]">
+              <h2 className="text-[#19103D] text-[3vw] font-extrabold text-center px-[15vw] pt-[5vw]">
+                What are some of the qualities and Attributes that are
+                discovered and built upon?
+              </h2>
+              <div className="place-self-center flex flex-row justify-start flex-wrap w-[75vw] h-fit pt-[5vw]">
+                <div className="w-[35vw] h-[10vw] flex flex-row  bg-[#D3D4E4] rounded-3xl m-[1vw] ">
+                  <img
+                    className="self-center w-[8vw] ml-[5vw] mr-[3vw]"
+                    src={require("./assets/support.png")}
+                    alt={"support icon"}
+                  />
+                  <p className="text-[#393939] w-[15vw] self-center text-[1.3vw] text-left font-medium ">
+                    Their ability to make friends and form a team
+                  </p>
+                </div>
+                <div className="w-[35vw] h-[10vw] flex flex-row bg-[#D3D4E4] rounded-3xl m-[1vw] ">
+                  <img
+                    className="self-center w-[8vw] ml-[5vw] mr-[3vw]"
+                    src={require("./assets/target.png")}
+                    alt={"target icon"}
+                  />
+                  <p className="text-[#393939] w-[15vw] self-center text-[1.3vw] text-left font-bold ">
+                    Verbalizing their vision
+                  </p>
+                </div>
+                <div className="w-[35vw] h-[10vw] flex flex-row bg-[#D3D4E4] rounded-3xl m-[1vw] ">
+                  <img
+                    className="self-center w-[8vw] ml-[5vw] mr-[3vw]"
+                    src={require("./assets/inspiration.png")}
+                    alt={"inspiration icon"}
+                  />
+                  <p className="text-[#393939] w-[15vw] self-center text-[1.3vw] text-left font-bold ">
+                    Inspiring the team to work on the vision
+                  </p>
+                </div>
+                <div className="w-[35vw] h-[10vw] flex flex-row bg-[#D3D4E4] rounded-3xl m-[1vw] ">
+                  <img
+                    className="self-center w-[8vw] ml-[5vw] mr-[3vw]"
+                    src={require("./assets/project-management.png")}
+                    alt={"management icon"}
+                  />
+                  <p className="text-[#393939] w-[15vw] self-center text-[1.3vw] text-left font-bold ">
+                    Managing a project from start to finish
+                  </p>
+                </div>
+                <div className="w-[35vw] h-[10vw] flex flex-row bg-[#D3D4E4] rounded-3xl m-[1vw] ">
+                  <img
+                    className="self-center w-[8vw] ml-[5vw] mr-[3vw]"
+                    src={require("./assets/leadership.png")}
+                    alt={"leadership icon"}
+                  />
+                  <p className="text-[#393939] w-[15vw] self-center text-[1.3vw] text-left font-bold ">
+                    Leadership when it matters
+                  </p>
+                </div>
+                <div className="w-[35vw] h-[10vw] flex flex-row bg-[#D3D4E4] rounded-3xl m-[1vw] ">
+                  <img
+                    className="self-center w-[8vw] ml-[5vw] mr-[3vw]"
+                    src={require("./assets/flex.png")}
+                    alt={"flexible icon"}
+                  />
+                  <p className="text-[#393939] w-[15vw] self-center text-[1.3vw] text-left font-bold ">
+                    Work Ethic
+                  </p>
+                </div>
+                <div className="w-[35vw] h-[10vw] flex flex-row bg-[#D3D4E4] rounded-3xl m-[1vw] ">
+                  <img
+                    className="self-center w-[8vw] ml-[5vw] mr-[3vw]"
+                    src={require("./assets/effort.png")}
+                    alt={"effort icon"}
+                  />
+                  <p className="text-[#393939] w-[15vw] self-center text-[1.3vw] text-left font-bold ">
+                    Grit
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-fit h-fit justify-center flex flex-row py-[5vw]">
+              <div className="w-[40vw] h-[35vw] flex flex-col justify-center mr-[5vw] pl-[10vw]">
+                <h2 className="text-[#19103D] text-[3vw]  font-bold leading-tight text-left ">
+                  The future of the world is not about getting a job anymore.
+                </h2>
+                <p className="text-[#19103D] text-[1.5vw] text-left font-medium leading-tight pt-[1vw]">
+                  Will you willing to go the extra mile to solve the problems of
+                  the world? This is what people want and how can one prepare
+                  this? What skills can be taught today?
+                </p>
+              </div>
+
+              <Slider {...settingsclass}>
+                <div className=" h-[32vw] flex flex-col shadow-gray-600 shadow-md rounded-3xl">
+                  <img
+                    className="w-[30vw] "
+                    src={require("./assets/classcard1.jpg")}
+                    alt={"classcard1"}
+                  />
+                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
+                    Leading a Positive and Powerful Brain Storming Session
+                  </p>
+                </div>
+                <div className=" h-[32vw] flex flex-col shadow-gray-600 shadow-md rounded-3xl ">
+                  <img
+                    className="w-[30vw] "
+                    src={require("./assets/classcard2.jpg")}
+                    alt={"classcard2"}
+                  />
+                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
+                    Having a Clear Vision Leading to Ideation
+                  </p>
+                </div>
+                <div className="h-[32vw] flex flex-col shadow-gray-600 shadow-md rounded-3xl ">
+                  <img
+                    className="w-[30vw] "
+                    src={require("./assets/classcard3.jpg")}
+                    alt={"classcard3"}
+                  />
+                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
+                    AGILE Project Management
+                  </p>
+                </div>
+                <div className="h-[32vw] flex flex-col shadow-gray-600 shadow-md  rounded-3xl ">
+                  <img
+                    className="w-[30vw] "
+                    src={require("./assets/classcard8.jpg")}
+                    alt={"classcard4"}
+                  />
+                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
+                    Funds Management
+                  </p>
+                </div>
+                <div className=" h-[32vw] flex flex-col shadow-gray-600 shadow-md rounded-3xl">
+                  <img
+                    className="w-[30vw] "
+                    src={require("./assets/classcard9.jpg")}
+                    alt={"classcard5"}
+                  />
+                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
+                    Prototyping of the vision
+                  </p>
+                </div>
+                <div className=" h-[32vw] flex flex-col shadow-gray-600 shadow-md rounded-3xl">
+                  <img
+                    className="w-[30vw] "
+                    src={require("./assets/classcard4.jpg")}
+                    alt={"classcard6"}
+                  />
+                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
+                    Presentation Dynamics
+                  </p>
+                </div>
+                <div className=" h-[32vw] flex flex-col shadow-gray-600 shadow-md rounded-3xl">
+                  <img
+                    className="w-[30vw] "
+                    src={require("./assets/classcard5.jpg")}
+                    alt={"classcard7"}
+                  />
+                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
+                    Mass Communications and Marketing
+                  </p>
+                </div>
+                <div className=" h-[32vw] flex flex-col shadow-gray-600 shadow-md rounded-3xl">
+                  <img
+                    className="w-[30vw] "
+                    src={require("./assets/classcard7.jpg")}
+                    alt={"classcard8"}
+                  />
+                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
+                    The Business Proposal
+                  </p>
+                </div>
+                <div className=" h-[32vw] flex flex-col shadow-gray-600 shadow-md rounded-3xl">
+                  <img
+                    className="w-[30vw] "
+                    src={require("./assets/classcard6.jpg")}
+                    alt={"classcard9"}
+                  />
+                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
+                    CRUNCH TIME! - Bringing it all together!
+                  </p>
+                </div>
+              </Slider>
+            </div>
+
+            <div className="w-full h-[55vw] bg-bgclass6 bg-center bg-no-repeat bg-cover flex flex-col justify-center align-middle">
+              <h2
+                className="text-[#19103D] text-[3vw] font-bold leading-tight 
+        text-left place-self-end w-[35vw] mr-[10vw]"
+              >
+                The Village is the creation of a space
+              </h2>
+              <p className="text-[#19103D] text-[1.5vw] text-left font-medium leading-tight place-self-end w-[35vw] pt-[2vw] mr-[10vw]">
+                that will allow our young creators to be in a natural space
+                where they feel inspired. A Simplified High Tech Lab built in
+                the beaches and parks of the world, fully functional and
+                sustainable.
+              </p>
+            </div>
+
+            <div className="w-full h-[50vw] flex flex-col justify-center">
+              <h2
+                className="text-[#19103D] text-[3vw] font-bold leading-tight 
+        text-center pb-[3vw]"
+              >
+                The next 2 camps in Singapore are on the
+              </h2>
+              <div className="flex flex-row justify-center">
+                <img
+                  className="w-[20vw] pr-[0.5vw]"
+                  src={require("./assets/cardclass1.png")}
+                  alt={"cardclass1"}
+                />
+
+                <img
+                  className="w-[20vw] pl-[0.5vw]"
+                  src={require("./assets/cardclass2.png")}
+                  alt={"cardclass2"}
+                />
+              </div>
+              <p className="text-[#19103D] text-[1.5vw] text-center font-medium leading-tight pt-[3vw] ">
+                Schools around the world can always connect with us for us to
+                bring this to your school or organization
+              </p>
+            </div>
+          </div>
+        ) : navState === "Home" && slideState === 2 ? (
           <div className="camp-page flex flex-col w-full h-fit">
             <div className="w-full h-[45vw] bg-white"></div>
 
@@ -450,11 +1161,7 @@ function App() {
               <p className="text-[#19103D] text-[2.5vw] place-self-center font-extrabold text-left w-[20vw] mr-[25vw] z-10">
                 FEAR! WE <br></br>AGREE WITH YOU
               </p>
-              {/* <img
-              className="flex object-cover content-center self-center h-[40vw] w-full z-[-1]"
-              src={require("./assets/pic4.jpg")}
-              alt={"indoor climbing"}
-            /> */}
+
               <p className="text-[#19103D] text-[1.4vw] place-self-center tracking-tight leading-tight z-10 text-left w-[20vw] ml-[25vw] mt-[-3vw]">
                 Our precious little ones going through tough challenges? It is
                 scary, but you know what? They are so much more capable than
@@ -1298,23 +2005,7 @@ function App() {
                 />
               </div>
               <div className="hover:cursor-pointer absolute place-self-center place-items-center rounded-full mt-[37vw] ml-[30vw] px-[5vw] py-[0.5vw] bg-[#05194A] text-white text-[1.1vw]">
-                <a
-                  href="##"
-                  // onClick={() =>
-                  //   console.log({
-                  //     childname,
-                  //     schoolname,
-                  //     pnumber,
-                  //     parentsname,
-                  //     childrenage,
-                  //     country,
-                  //     email,
-                  //     input,
-                  //   })
-                  // }
-                >
-                  Register
-                </a>
+                <a href="##">Register</a>
               </div>
 
               <Link onClick={() => setNavState("privacy")} to="/privacy">
@@ -1383,715 +2074,9 @@ function App() {
               </p>
             </div>
           </div>
-        ) : navState === "Home" && slideState === 1 ? (
-          <div className="class-page flex flex-col w-full h-fit">
-            <div className="w-full h-[50vw]"></div>
-
-            <div className="w-full h-[65vw] bg-bgclass3 bg-center bg-no-repeat bg-cover flex flex-col justify-center align-middle">
-              <h2 className="text-white text-[3vw] font-extrabold place-self-center justify-center text-center px-[10vw] leading-none">
-                THE WORLD IS BECOMING A MORE AND MORE CHALLENGING PLACE DAILY
-              </h2>
-              <p className="text-white text-[1.5vw] font-medium place-self-center justify-center text-center px-[25vw] leading-none pt-[1vw]">
-                and it is crucial that we bring experience that conditions our
-                young winners to take on the unknown.
-              </p>
-            </div>
-
-            <div className="w-full h-[40vw] flex flex-col ">
-              <p className="text-[#19103D] text-[1.5vw] font-medium px-[10vw] leading-none pt-[5vw]">
-                The Classroom Without Walls 4 days and 3 nights camp built to
-                introduce, hone and showcase the skills, attributes and
-                excellence that will take our young leaders on the path to
-                vocational greatness, when they are of age
-              </p>
-
-              <h2 className="text-[#19103D]  text-[3vw] font-extrabold text-center px-[12vw] pt-[5vw]">
-                For the 4 days and 3 nights, they are locked in “The Village”
-                where they have to
-              </h2>
-
-              <img
-                className="place-self-center pt-[5vw] w-[70%]"
-                src={require("./assets/bgclass5.jpg")}
-                alt={"background1"}
-              />
-            </div>
-
-            <div className="w-full h-fit flex flex-col pt-[10vw]">
-              <h2 className="text-[#19103D] text-[3vw] font-extrabold text-center px-[15vw] pt-[5vw]">
-                What are some of the qualities and Attributes that are
-                discovered and built upon?
-              </h2>
-              <div className="place-self-center flex flex-row justify-start flex-wrap w-[75vw] h-fit pt-[5vw]">
-                <div className="w-[35vw] h-[10vw] flex flex-row  bg-[#D3D4E4] rounded-3xl m-[1vw] ">
-                  <img
-                    className="self-center w-[8vw] ml-[5vw] mr-[3vw]"
-                    src={require("./assets/support.png")}
-                    alt={"support icon"}
-                  />
-                  <p className="text-[#393939] w-[15vw] self-center text-[1.3vw] text-left font-medium ">
-                    Their ability to make friends and form a team
-                  </p>
-                </div>
-                <div className="w-[35vw] h-[10vw] flex flex-row bg-[#D3D4E4] rounded-3xl m-[1vw] ">
-                  <img
-                    className="self-center w-[8vw] ml-[5vw] mr-[3vw]"
-                    src={require("./assets/target.png")}
-                    alt={"target icon"}
-                  />
-                  <p className="text-[#393939] w-[15vw] self-center text-[1.3vw] text-left font-bold ">
-                    Verbalizing their vision
-                  </p>
-                </div>
-                <div className="w-[35vw] h-[10vw] flex flex-row bg-[#D3D4E4] rounded-3xl m-[1vw] ">
-                  <img
-                    className="self-center w-[8vw] ml-[5vw] mr-[3vw]"
-                    src={require("./assets/inspiration.png")}
-                    alt={"inspiration icon"}
-                  />
-                  <p className="text-[#393939] w-[15vw] self-center text-[1.3vw] text-left font-bold ">
-                    Inspiring the team to work on the vision
-                  </p>
-                </div>
-                <div className="w-[35vw] h-[10vw] flex flex-row bg-[#D3D4E4] rounded-3xl m-[1vw] ">
-                  <img
-                    className="self-center w-[8vw] ml-[5vw] mr-[3vw]"
-                    src={require("./assets/project-management.png")}
-                    alt={"management icon"}
-                  />
-                  <p className="text-[#393939] w-[15vw] self-center text-[1.3vw] text-left font-bold ">
-                    Managing a project from start to finish
-                  </p>
-                </div>
-                <div className="w-[35vw] h-[10vw] flex flex-row bg-[#D3D4E4] rounded-3xl m-[1vw] ">
-                  <img
-                    className="self-center w-[8vw] ml-[5vw] mr-[3vw]"
-                    src={require("./assets/leadership.png")}
-                    alt={"leadership icon"}
-                  />
-                  <p className="text-[#393939] w-[15vw] self-center text-[1.3vw] text-left font-bold ">
-                    Leadership when it matters
-                  </p>
-                </div>
-                <div className="w-[35vw] h-[10vw] flex flex-row bg-[#D3D4E4] rounded-3xl m-[1vw] ">
-                  <img
-                    className="self-center w-[8vw] ml-[5vw] mr-[3vw]"
-                    src={require("./assets/flex.png")}
-                    alt={"flexible icon"}
-                  />
-                  <p className="text-[#393939] w-[15vw] self-center text-[1.3vw] text-left font-bold ">
-                    Work Ethic
-                  </p>
-                </div>
-                <div className="w-[35vw] h-[10vw] flex flex-row bg-[#D3D4E4] rounded-3xl m-[1vw] ">
-                  <img
-                    className="self-center w-[8vw] ml-[5vw] mr-[3vw]"
-                    src={require("./assets/effort.png")}
-                    alt={"effort icon"}
-                  />
-                  <p className="text-[#393939] w-[15vw] self-center text-[1.3vw] text-left font-bold ">
-                    Grit
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-fit h-fit justify-center flex flex-row py-[5vw]">
-              <div className="w-[40vw] h-[35vw] flex flex-col justify-center mr-[5vw] pl-[10vw]">
-                <h2 className="text-[#19103D] text-[3vw]  font-bold leading-tight text-left ">
-                  The future of the world is not about getting a job anymore.
-                </h2>
-                <p className="text-[#19103D] text-[1.5vw] text-left font-medium leading-tight pt-[1vw]">
-                  Will you willing to go the extra mile to solve the problems of
-                  the world? This is what people want and how can one prepare
-                  this? What skills can be taught today?
-                </p>
-              </div>
-
-              <Slider {...settingsclass}>
-                <div className=" h-[32vw] flex flex-col shadow-gray-600 shadow-md rounded-3xl">
-                  <img
-                    className="w-[30vw] "
-                    src={require("./assets/classcard1.jpg")}
-                    alt={"classcard1"}
-                  />
-                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
-                    Leading a Positive and Powerful Brain Storming Session
-                  </p>
-                </div>
-                <div className=" h-[32vw] flex flex-col shadow-gray-600 shadow-md rounded-3xl ">
-                  <img
-                    className="w-[30vw] "
-                    src={require("./assets/classcard2.jpg")}
-                    alt={"classcard2"}
-                  />
-                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
-                    Having a Clear Vision Leading to Ideation
-                  </p>
-                </div>
-                <div className="h-[32vw] flex flex-col shadow-gray-600 shadow-md rounded-3xl ">
-                  <img
-                    className="w-[30vw] "
-                    src={require("./assets/classcard3.jpg")}
-                    alt={"classcard3"}
-                  />
-                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
-                    AGILE Project Management
-                  </p>
-                </div>
-                <div className="h-[32vw] flex flex-col shadow-gray-600 shadow-md  rounded-3xl ">
-                  <img
-                    className="w-[30vw] "
-                    src={require("./assets/classcard8.jpg")}
-                    alt={"classcard4"}
-                  />
-                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
-                    Funds Management
-                  </p>
-                </div>
-                <div className=" h-[32vw] flex flex-col shadow-gray-600 shadow-md rounded-3xl">
-                  <img
-                    className="w-[30vw] "
-                    src={require("./assets/classcard9.jpg")}
-                    alt={"classcard5"}
-                  />
-                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
-                    Prototyping of the vision
-                  </p>
-                </div>
-                <div className=" h-[32vw] flex flex-col shadow-gray-600 shadow-md rounded-3xl">
-                  <img
-                    className="w-[30vw] "
-                    src={require("./assets/classcard4.jpg")}
-                    alt={"classcard6"}
-                  />
-                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
-                    Presentation Dynamics
-                  </p>
-                </div>
-                <div className=" h-[32vw] flex flex-col shadow-gray-600 shadow-md rounded-3xl">
-                  <img
-                    className="w-[30vw] "
-                    src={require("./assets/classcard5.jpg")}
-                    alt={"classcard7"}
-                  />
-                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
-                    Mass Communications and Marketing
-                  </p>
-                </div>
-                <div className=" h-[32vw] flex flex-col shadow-gray-600 shadow-md rounded-3xl">
-                  <img
-                    className="w-[30vw] "
-                    src={require("./assets/classcard7.jpg")}
-                    alt={"classcard8"}
-                  />
-                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
-                    The Business Proposal
-                  </p>
-                </div>
-                <div className=" h-[32vw] flex flex-col shadow-gray-600 shadow-md rounded-3xl">
-                  <img
-                    className="w-[30vw] "
-                    src={require("./assets/classcard6.jpg")}
-                    alt={"classcard9"}
-                  />
-                  <p className="text-[#19103D] text-[1.5vw] px-[3vw] text-left font-bold leading-tight pt-[1vw]">
-                    CRUNCH TIME! - Bringing it all together!
-                  </p>
-                </div>
-              </Slider>
-            </div>
-
-            <div className="w-full h-[55vw] bg-bgclass6 bg-center bg-no-repeat bg-cover flex flex-col justify-center align-middle">
-              <h2
-                className="text-[#19103D] text-[3vw] font-bold leading-tight 
-        text-left place-self-end w-[35vw] mr-[10vw]"
-              >
-                The Village is the creation of a space
-              </h2>
-              <p className="text-[#19103D] text-[1.5vw] text-left font-medium leading-tight place-self-end w-[35vw] pt-[2vw] mr-[10vw]">
-                that will allow our young creators to be in a natural space
-                where they feel inspired. A Simplified High Tech Lab built in
-                the beaches and parks of the world, fully functional and
-                sustainable.
-              </p>
-            </div>
-
-            <div className="w-full h-[50vw] flex flex-col justify-center">
-              <h2
-                className="text-[#19103D] text-[3vw] font-bold leading-tight 
-        text-center pb-[3vw]"
-              >
-                The next 2 camps in Singapore are on the
-              </h2>
-              <div className="flex flex-row justify-center">
-                <img
-                  className="w-[20vw] pr-[0.5vw]"
-                  src={require("./assets/cardclass1.png")}
-                  alt={"cardclass1"}
-                />
-
-                <img
-                  className="w-[20vw] pl-[0.5vw]"
-                  src={require("./assets/cardclass2.png")}
-                  alt={"cardclass2"}
-                />
-              </div>
-              <p className="text-[#19103D] text-[1.5vw] text-center font-medium leading-tight pt-[3vw] ">
-                Schools around the world can always connect with us for us to
-                bring this to your school or organization
-              </p>
-            </div>
-          </div>
-        ) : navState === "Home" && slideState === 2 ? (
-          <div className="home-page flex flex-col w-full h-fit">
-            <div className="w-full h-[50vw] bg-white"></div>
-
-            <div className="w-full h-fit flex flex-col bg-white">
-              <h2 className=" absolute place-self-center justify-center text-[#19103D] text-[4vw] font-extrabold text-center leading-none px-[15vw]">
-                These are such tough times to be a parent
-              </h2>
-              <div
-                className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
-          mt-[10vw] ml-[15vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
-              >
-                Schools have gotten harder.
-              </div>
-              <div
-                className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
-          mt-[14vw] ml-[7vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
-              >
-                The bad elements of social media are<br></br>victimizing our
-                children
-              </div>
-              <div
-                className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
-          mt-[20vw] ml-[10vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
-              >
-                They have become more dependent and<br></br>entitled than ever
-                before
-              </div>
-              <div
-                className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
-          mt-[26vw] ml-[10vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
-              >
-                They have become reclusive
-              </div>
-              <div
-                className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
-          mt-[11vw] ml-[55vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
-              >
-                We have all becomes addicts of technology<br></br>(mostly the
-                phone)
-              </div>
-              <div
-                className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
-          mt-[18vw] ml-[60vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
-              >
-                It is so difficult to understand their needs
-              </div>
-              <div
-                className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
-          mt-[23vw] ml-[67vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
-              >
-                Gaming world is larger than ever and is<br></br>sucking our kids
-                in
-              </div>
-              <div className="absolute flex flex-col justify-end w-[45vw] h-fit place-self-end mt-[80%] mr-[5%]">
-                <h2 className=" text-white text-[3vw] font-bold text-right leading-tight">
-                  It’s tough. We see it. We now both need to agree that more has
-                  to be done
-                </h2>
-                <p className="text-white text-[1vw] font-semibold text-right pb-[2vw] pt-[1vw] pl-[17vw]">
-                  This cannot be done by you alone. You need a group of people
-                  dedicated to the growth and excellence of your children.
-                </p>
-                <a
-                  className="flex hover:cursor-pointer bg-gradient-to-r from-[#FC5229] to-[#AF067D] font-extrabold text-white text-[1.1vw] tracking-wide place-self-end place-content-center place-items-center justify-center align-middle rounded-xl px-[2vw] w-fit h-[2.5vw]"
-                  href="##"
-                >
-                  GET IN TOUCH
-                </a>
-              </div>
-              <img
-                className="flex object-contain w-full mt-[10vw]"
-                src={require("./assets/bg4.jpg")}
-                alt={"background4"}
-              />
-            </div>
-
-            <div className="flex flex-col w-full h-[40vw] bg-bg5 bg-center bg-cover justify-center">
-              <img
-                className="absolute mt-[-13%] place-self-end w-[15vw]"
-                src={require("./assets/icomma.jpg")}
-                alt={"decoration"}
-              />
-              <p className="text-[#190539]  font-medium text-[1.2vw] flex flex-col text-left px-[18vw]">
-                I am going to be honest here. Working with Coach Gabe was a
-                challenge. Matthew got 5/100 for all his subjects when I brought
-                him to Coach. Matthew was on medication for ADHD and the school
-                had nothing but complaints about him.<br></br> <br></br> Coach
-                Gabe told me that he would do his best. This was Matt’s PSLE
-                year and we went to Score Campus in June. Results came and he
-                got 225. We were speechless for an hour. I asked Matt, how did
-                he do this?<br></br> <br></br> He replied, The coaches built me
-                a table to stand and do my work. Every time I got a right
-                answer, he gave hugs, high fives and a genius cookie.”
-              </p>
-              <p
-                style={{
-                  "text-shadow":
-                    "-2px -2px 0 #FF5C00,2px -2px 0 #FF5C00,-2px 2px 0 #FF5C00, 2px 2px 0 #FF5C00",
-                }}
-                className="text-[2vw] italic text-white tracking-wide px-[18vw] text-left pt-[3vw] font-extrabold"
-              >
-                Matthew, son of Serene
-              </p>
-            </div>
-
-            <div className="flex flex-col w-full h-[54vw] bg-ellips bg-center bg-cover bg-no-repeat justify-center z-10">
-              <h2 className="text-center text-white text-[3vw] font-extrabold ">
-                WHY US AND WHO ARE WE?
-              </h2>
-              <p className="text-center text-white text-[1.1vw] font-bold px-[15vw] pt-[3vw]">
-                This is simple.{" "}
-                <span className="text-black text-[1.2vw]">
-                  We do what we do, so that you can completely enjoy being a
-                  parent at home.
-                </span>{" "}
-                Let’s be honest. You have 18 years at this before they grow
-                wings and fly. How do you want them to remember this? Food for
-                thought!
-              </p>
-              <p
-                style={{
-                  "text-shadow":
-                    "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
-                }}
-                className="text-[3vw] text-[#F5AA4D] px-[15vw] text-center pt-[3vw] font-extrabold"
-              >
-                NOW, TO SCORE CAMPUS.
-              </p>
-              <p className="text-center text-white text-[1.1vw] font-bold px-[15vw] pt-[1vw]">
-                My goodness! What a journey it has been?
-              </p>
-              <div className="inline-flex flex-row justify-around align-middle content-center w-[70vw] pb-[8vw] place-self-center pt-[5vw]">
-                <div className="flex flex-col justify-center align-middle">
-                  <p className="text-center text-white text-[1.1vw] font-bold ">
-                    More than a
-                  </p>
-
-                  <p
-                    style={{
-                      "text-shadow":
-                        "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
-                    }}
-                    className="text-[5vw] text-[#F7AF4D] text-center font-extrabold"
-                  >
-                    100
-                  </p>
-
-                  <p className="text-center text-white text-[1.1vw] font-bold ">
-                    cities over 12 countries
-                  </p>
-                </div>
-                <div className="flex flex-col justify-center align-middle">
-                  <p className="text-center text-white text-[1.1vw] font-bold ">
-                    More than
-                  </p>
-
-                  <p
-                    style={{
-                      "text-shadow":
-                        "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
-                    }}
-                    className="text-[5vw] text-[#F7AA4E] text-center font-extrabold"
-                  >
-                    200,000
-                  </p>
-
-                  <p className="text-center text-white text-[1.1vw] font-bold ">
-                    students
-                  </p>
-                </div>
-                <div className="flex flex-col justify-center align-middle">
-                  <p className="text-center text-white text-[1.1vw] font-bold ">
-                    More than
-                  </p>
-
-                  <p
-                    style={{
-                      "text-shadow":
-                        "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
-                    }}
-                    className="text-[5vw] text-[#F5A752] text-center font-extrabold"
-                  >
-                    15,000
-                  </p>
-
-                  <p className="text-center text-white text-[1.1vw] font-bold ">
-                    teachers
-                  </p>
-                </div>
-                <div className="flex flex-col justify-center align-middle">
-                  <p className="text-center text-white invisible text-[1.1vw] font-bold ">
-                    {"aaaa"}
-                  </p>
-
-                  <p
-                    style={{
-                      "text-shadow":
-                        "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
-                    }}
-                    className="text-[5vw] text-[#F4A354] text-center font-extrabold"
-                  >
-                    27
-                  </p>
-
-                  <p className="text-center text-white text-[1.1vw] font-bold ">
-                    years
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full h-[50vw]">
-              <img
-                className="absolute w-[100%] mt-[-9vw] z-[-1]"
-                src={require("./assets/component2.jpg")}
-                alt={"bgcomponent"}
-              />
-
-              <p className="text-center text-black text-[1.5vw] font-medium pt-[5vw] ">
-                Our Coaching Philosophy :
-              </p>
-              <p className="text-center text-black text-[3vw] font-extrabold pt-[3vw] ">
-                Learning is a change in behaviour as a<br></br>result of an
-                experience.
-              </p>
-              <div className="inline-flex flex-row justify-center align-middle">
-                <p className="text-center text-black text-[1.5vw] font-medium pt-[5vw] ">
-                  Powered by <span className="invisible">-</span>
-                </p>
-                <a
-                  className="flex hover:cursor-pointer bg-gradient-to-r from-[#2795D1] to-[#F44839] place-self-end place-content-center place-items-center justify-center align-middle rounded-full px-[3vw] w-fit h-[2.5vw]"
-                  href="web.scorecampus.com"
-                >
-                  <div className="flex flex-col text-center font-semibold tracking-wide justify-center align-middle place-self-center bg-white rounded-full text-[1.1vw] mx-[-2.9vw] w-[10vw] h-[2.3vw]">
-                    Scorecampus.com
-                  </div>
-                </a>
-
-                <p className="text-center text-black text-[1.5vw] font-medium pt-[5vw] ">
-                  <span className="invisible">-</span> and{" "}
-                  <span className="invisible">-</span>
-                </p>
-
-                <a
-                  className="flex hover:cursor-pointer bg-gradient-to-r from-[#2795D1] to-[#F44839] place-self-end place-content-center place-items-center justify-center align-middle rounded-full px-[3vw] w-fit h-[2.5vw]"
-                  href="web.scorecampus.com"
-                >
-                  <div className="flex flex-col text-center font-semibold tracking-wide justify-center align-middle place-self-center bg-white rounded-full text-[1.1vw] mx-[-2.9vw] w-[10vw] h-[2.3vw]">
-                    Let's Fl!p app
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div className="flex flex-col place-content-center place-items-end justify-center w-full h-[35vw] bg-bg6 bg-center bg-cover bg-no-repeat">
-              <h2 className=" text-white text-[3vw] font-bold text-left leading-tight pr-[3vw] w-[45vw]">
-                So, what is this all about and how can we work together?
-              </h2>
-              <p className="text-left text-white text-[1.1vw] pr-[3vw] w-[45vw] font-medium pt-[1vw]">
-                For a start, let’s meet over coffee and talk. But for now, we
-                have <br></br>
-                described in brief what we do for every child.
-              </p>
-              <a
-                className="flex hover:cursor-pointer bg-gradient-to-r from-[#FC5229] to-[#AF067D] font-extrabold text-white text-[1.1vw] tracking-wide place-items-center mr-[33vw] mt-[3vw] rounded-full px-[2vw] w-fit h-[2.5vw]"
-                href="##"
-              >
-                GET IN TOUCH
-              </a>
-            </div>
-
-            <div className="flex flex-col w-full h-[200vw] bg-component4 bg-center bg-cover bg-no-repeat">
-              <div className="flex flex-col w-[45vw] ml-[12vw] mt-[10vw] h-fit">
-                <p className="text-left text-[#05194A] text-[1.1vw] font-medium">
-                  The complete Score Campus experience
-                </p>
-                <h2 className="text-left text-[#05194A] text-[2.5vw] font-bold leading-none tracking-tighter pt-[1vw]">
-                  Sounds very cliche but it all starts within the perimeters of
-                  Love and Tough Love
-                </h2>
-                <p className="text-left text-[#05194A] text-[1.1vw] font-medium pt-[1vw] w-[90%]">
-                  At Score Campus, it gets as real as it gets. It is student
-                  driven. They are on the driver’s seat and we are the guides.
-                  They have dreams and they want to succeed. We just need to
-                  listen to them!
-                </p>
-                <h2 className="text-left text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighter pt-[1vw] w-[80%]">
-                  6 Months Coaching Relationship for a start (Start and end date
-                  is highly customizable)
-                </h2>
-              </div>
-
-              <div
-                className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
-         place-self-end mt-[-5vw] mr-[10vw]"
-              >
-                <img
-                  className="w-[12vw] place-self-center"
-                  src={require("./assets/card1.png")}
-                  alt={"the first step"}
-                />
-                <h2 className="text-left pl-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
-                  The First Step
-                </h2>
-                <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
-                  There are 38 values, attributes and characteristics that you
-                  must know about your children. It is designed for kids above
-                  10 but you will be surprised by the outcomes.
-                </p>
-              </div>
-
-              <div
-                className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
-         place-self-start ml-[10vw]"
-              >
-                <img
-                  className="w-[12vw] place-self-center"
-                  src={require("./assets/card2.png")}
-                  alt={"Assigned to a coach"}
-                />
-                <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
-                  Assigned to a coach
-                </h2>
-                <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
-                  For academic planning for English, Maths and Science
-                </p>
-              </div>
-
-              <div
-                className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
-         place-self-end mt-[-10vw] mr-[25vw]"
-              >
-                <img
-                  className="w-[20vw] place-self-center"
-                  src={require("./assets/card3.png")}
-                  alt={"Weekdays are for academic coaching"}
-                />
-                <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
-                  Weekdays are for academic coaching
-                </h2>
-                <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
-                  In campus or online. We do this though the Let’s Flip App and
-                  www.scorecampus.com
-                </p>
-              </div>
-
-              <div
-                className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
-         place-self-start mt-[-5vw] ml-[5vw]"
-              >
-                <img
-                  className="w-[12vw] place-self-center"
-                  src={require("./assets/card4.png")}
-                  alt={"Saturdays are for character development"}
-                />
-                <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
-                  Saturdays are for character development
-                </h2>
-                <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
-                  Skills and Project Work.
-                </p>
-              </div>
-
-              <div
-                className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
-         place-self-end mt-[-10vw] mr-[13vw]"
-              >
-                <img
-                  className="w-[12vw] place-self-center"
-                  src={require("./assets/card5.png")}
-                  alt={"The Next Level Camp"}
-                />
-                <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
-                  The Next Level Camp
-                </h2>
-                <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
-                  5 to 7 days of an experience that every child in the world
-                  must go for. More details in the page.
-                </p>
-              </div>
-
-              <div
-                className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
-         place-self-start mt-[-5vw] ml-[30vw]"
-              >
-                <img
-                  className="w-[12vw] place-self-center"
-                  src={require("./assets/card6.png")}
-                  alt={"Classroom Without Walls"}
-                />
-                <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
-                  Classroom Without Walls
-                </h2>
-                <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
-                  4 days Project Management Experience that bridges your
-                  academic world to the corporate experience.
-                </p>
-              </div>
-
-              <div
-                className="flex flex-col justify-center w-[24vw] h-[28vw] backdrop-blur-2xl rounded-3xl outline outline-4 outline-white
-         place-self-end mt-[-5vw] mr-[8vw]"
-              >
-                <img
-                  className="w-[12vw] place-self-center"
-                  src={require("./assets/card7.png")}
-                  alt={"Competitive Sports"}
-                />
-                <h2 className="text-left px-[3vw] text-[#05194A] text-[1.8vw] font-bold leading-none tracking-tighte pt-[2vw]">
-                  Competitive Sports
-                </h2>
-                <p className="text-left px-[3vw] text-[#05194A] text-[1.1vw] font-medium pt-[1vw]">
-                  Sports reveals character and we build on them
-                </p>
-              </div>
-              <a
-                className="flex hover:cursor-pointer bg-gradient-to-r from-[#FC5229] to-[#AF067D] font-extrabold text-white text-[3vw] tracking-wide place-items-center rounded-full mt-[5vw] mx-auto px-[4vw] w-fit h-[6vw]"
-                href="##"
-              >
-                GET IN TOUCH
-              </a>
-            </div>
-
-            <div className="flex flex-col justify-center w-full h-[40vw] ">
-              <img
-                className=" absolute w-[80vw] place-self-center z-0"
-                src={require("./assets/bghome1.jpg")}
-                alt={"background pic"}
-              />
-              <h2 className="text-center place-self-center text-white text-[2.5vw] font-bold leading-none tracking-tighter w-[60vw] z-10">
-                We built this entire EcoSystem based on Love.
-              </h2>
-              <p className="text-center place-self-center px-[3vw] text-white text-[1.1vw] font-medium w-[60vw] pt-[2vw] z-10">
-                One might think that this is mushy talk but I challenge you to
-                come see the family we have here. Everything here is built as a
-                model for schools to follow. Come visit with us!
-              </p>
-              <a
-                className="flex hover:cursor-pointer bg-gradient-to-r from-[#FC5229] to-[#AF067D] font-extrabold text-white text-[1.1vw] tracking-wide place-self-center place-content-center place-items-center rounded-full justify-center align-middle mt-[2vw] px-[2vw] w-fit h-[2.5vw] z-10"
-                href="##"
-              >
-                GET IN TOUCH
-              </a>
-            </div>
-          </div>
         ) : (
           <div></div>
-        )}
+        )} */}
       </div>
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
