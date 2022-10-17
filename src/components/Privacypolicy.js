@@ -12,7 +12,6 @@ function Privacypolicy() {
   const [policy9, setpolicy9] = useState(0);
   const [policy10, setpolicy10] = useState(0);
   const [policy11, setpolicy11] = useState(0);
-  const [policy12, setpolicy12] = useState(0);
 
   return (
     <>
