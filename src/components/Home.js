@@ -6,38 +6,7 @@ function Home() {
   const [cardState, setCardState] = useState(1);
 
   return (
-    <div className="wrapper flex flex-col w-full h-fit">
-      {/* <div className="w-full h-fit">
-        <img
-          className="flex object-contain w-full"
-          src={require("../assets/bg1.jpg")}
-          alt={"background1"}
-        />
-      </div>
-
-      <div className="w-full h-[40vw] absolute flex flex-row">
-        <div className="w-[50vw] h-[100%] flex flex-col justify-center  text-white text-[4vw] font-extrabold text-center">
-          CLASSROOM<br></br> WITHOUT WALLS
-        </div>
-        <div className="w-[45vw] h-[100%] flex flex-col justify-center  bg-white rounded-3xl mt-[5vw] overflow-hidden">
-          <h2 className=" text-[#19103D] text-[4vw] font-extrabold text-center px-[3vw] leading-none pb-[2vw]">
-            Classroom Without Walls
-          </h2>
-          <div className="flex flex-row justify-center place-self-center place-content-center align-middle w-[20vw]">
-            <p className="px-[1vw] font-medium">Details</p>
-            <p className="px-[1vw] font-medium">Photos</p>
-            <p className="px-[1vw] font-medium">Testimony</p>
-            <p className="px-[1vw] font-medium">Map</p>
-          </div>
-          <p className=" text-grey-400 text-[2.5vw] font-extrabold text-center px-[5vw] py-[3vw] leading-tight ">
-            The Perfect Bridge between the students’ academic learning and the
-            real world.
-          </p>
-          <p className=" text-[1vw] text-blue-400 underline pt-[1vw]">
-            Learn More
-          </p>
-        </div>
-      </div> */}
+    <div className="home-page flex flex-col w-full h-fit">
       <div className="w-full h-[50vw] bg-white"></div>
 
       <div className="w-full h-fit flex flex-col bg-white">

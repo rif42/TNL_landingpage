@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import Slider from "react-slick";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Switch,
+  Link,
+  Route,
+} from "react-router-dom";
 
 function Camp() {
   const [selectionState, setSelectionState] = useState(0);
@@ -31,100 +38,6 @@ function Camp() {
   };
   return (
     <div className="wrapper flex flex-col w-full h-fit">
-      {/* <div className="w-full h-fit">
-        <img
-          className="flex object-contain w-full"
-          src={require("../assets/bg3.jpg")}
-          alt={"background1"}
-        />
-      </div>
-
-      <div className="w-full h-[40vw] absolute flex flex-row">
-        <div className="w-[50vw] h-[100%] flex flex-col justify-center  text-white text-[4vw] font-extrabold text-center">
-          THE NEXT LEVEL LEADERSHIP CAMP
-        </div>
-        <div className="w-[45vw] h-[100%] flex flex-col justify-center  bg-white rounded-3xl mt-[5vw] overflow-hidden">
-          <h2 className=" text-[#19103D] text-[4vw] font-extrabold text-center px-[3vw] leading-none pb-[2vw]">
-            The Next Level Leadership Camp
-          </h2>
-          <div className="flex flex-row justify-center place-self-center place-content-center align-middle w-[20vw]">
-            <p
-              onClick={() => {
-                setSelectionState(0);
-              }}
-              className={
-                selectionState === 0
-                  ? "px-[1vw] font-medium hover:cursor-pointer"
-                  : "px-[1vw] font-medium text-gray-400 hover:cursor-pointer"
-              }
-            >
-              Details
-            </p>
-            <p
-              onClick={() => {
-                setSelectionState(1);
-              }}
-              className={
-                selectionState === 1
-                  ? "px-[1vw] font-medium hover:cursor-pointer"
-                  : "px-[1vw] font-medium text-gray-400 hover:cursor-pointer"
-              }
-            >
-              Photos
-            </p>
-            <p
-              onClick={() => {
-                setSelectionState(2);
-              }}
-              className={
-                selectionState === 2
-                  ? "px-[1vw] font-medium hover:cursor-pointer"
-                  : "px-[1vw] font-medium text-gray-400 hover:cursor-pointer"
-              }
-            >
-              Testimony
-            </p>
-            <p
-              onClick={() => {
-                setSelectionState(3);
-              }}
-              className={
-                selectionState === 3
-                  ? "px-[1vw] font-medium hover:cursor-pointer"
-                  : "px-[1vw] font-medium text-gray-400 hover:cursor-pointer"
-              }
-            >
-              Map
-            </p>
-          </div>
-          {selectionState === 0 ? (
-            <p className="text-[2vw] font-bold text-center px-[5vw] py-[3vw] h-[20vw] leading-tight ">
-              Once a year, a child or a teen must leave the comfort of home and
-              luxury and go to a place called THE NEXT LEVEL CAMP, to answer the
-              tough questions of life to GROW!
-            </p>
-          ) : selectionState === 1 ? (
-            <div className="flex flex-row justify-center place-self-center place-content-center align-middle w-[20vw] h-[20vw]"></div>
-          ) : selectionState === 2 ? (
-            <p className="flex flex-col place-self-center justify-center item text-[1.1vw] font-medium italic text-center px-[5vw] w-[45vw] h-[20vw] ">
-              “The Next Level Camp was one of the hardest things I have done in
-              my life, but if you ask me to do it again, I will do it in a
-              heartbeat. This is something I would recommend for every teen out
-              there and the relationships built here, lasts a lifetime.”{" "}
-              <br></br>
-              <br></br>
-              <br></br>- Kenny, The Next Level 2018 Kulim Camp, Malaysia!
-            </p>
-          ) : selectionState === 3 ? (
-            <div className="flex flex-row bg-map bg-center bg-no-repeat bg-contain justify-center place-self-center place-content-center align-middle w-[37vw] h-[20vw]"></div>
-          ) : null}
-
-          <p className=" text-[1vw] text-blue-400 underline pt-[1vw] hover:cursor-pointer">
-            Learn More
-          </p>
-        </div>
-      </div> */}
-
       <div className="w-full h-[45vw] bg-white"></div>
 
       <div className="w-full h-[20vw] flex flex-col justify-center align-middle">
@@ -1076,15 +989,15 @@ function Camp() {
             Register
           </a>
         </div>
-        <div className="absolute place-self-center place-items-center rounded-full w-[20vw] mt-[41.5vw] ml-[30vw] px-[5vw] py-[0.5vw] tracking-tight text-gray-500 text-[0.5vw]">
-          By clicking the submit button below, I agree to and accept the{" "}
-          <span
-            href="##"
-            className="text-gray-700 underline hover:cursor-pointer"
-          >
-            following terms and conditions
-          </span>
-        </div>
+
+        <Link to="/privacy" target="_blank">
+          <div className="absolute place-self-center place-items-center rounded-full w-[20vw] mt-[41.5vw] ml-[-41vw] px-[5vw] py-[0.5vw] tracking-tight text-gray-500 text-[0.5vw]">
+            By clicking the submit button below, I agree to and accept the{" "}
+            <span className="text-gray-700 underline hover:cursor-pointer">
+              following terms and conditions
+            </span>
+          </div>
+        </Link>
       </div>
 
       <div className="w-full h-[30vw] flex flex-col justify-center align-middle">
