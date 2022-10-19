@@ -13,7 +13,7 @@ function Class() {
   };
 
   return (
-    <div className="wrapper flex flex-col w-full h-fit">
+    <div className="class-page flex flex-col w-full h-fit">
       <div className="w-full h-[50vw]"></div>
 
       <div className="w-full h-[65vw] bg-bgclass3 bg-center bg-no-repeat bg-cover flex flex-col justify-center align-middle">

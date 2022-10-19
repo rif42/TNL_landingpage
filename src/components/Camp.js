@@ -37,7 +37,7 @@ function Camp() {
     className: "w-[97%] mx-auto",
   };
   return (
-    <div className="wrapper flex flex-col w-full h-fit">
+    <div className="camp-page flex flex-col w-full h-fit">
       <div className="w-full h-[45vw] bg-white"></div>
 
       <div className="w-full h-[20vw] flex flex-col justify-center align-middle">
@@ -149,11 +149,7 @@ function Camp() {
         <p className="text-[#19103D] text-[2.5vw] place-self-center font-extrabold text-left w-[20vw] mr-[25vw] z-10">
           FEAR! WE <br></br>AGREE WITH YOU
         </p>
-        {/* <img
-          className="flex object-cover content-center self-center h-[40vw] w-full z-[-1]"
-          src={require("../assets/pic4.jpg")}
-          alt={"indoor climbing"}
-        /> */}
+
         <p className="text-[#19103D] text-[1.4vw] place-self-center tracking-tight leading-tight z-10 text-left w-[20vw] ml-[25vw] mt-[-3vw]">
           Our precious little ones going through tough challenges? It is scary,
           but you know what? They are so much more capable than what we give
@@ -287,27 +283,27 @@ function Camp() {
         </div>
       </div>
 
-      <div className="w-full flex flex-col justify-center align-middle h-[40vw] pt-[10vw] bg-white">
+      <div className="w-full flex flex-col justify-center align-middle h-[50vw]  bg-white">
         <h2
           className=" text-[#19103D] text-[2.5vw] font-extrabold text-center mt-[-3vw] px-[3vw] leading-none 
-        pb-[3vw]"
+            pb-[3vw]"
         >
           LET US PAINT YOU A PICTURE WITH WORDS.
         </h2>
         <div className="flex flex-row justify-center place-self-center place-content-center align-middle h-[30vw] w-[75vw]">
           <div className="bg-pic1 bg-center bg-contain bg-no-repeat w-[25vw] h-[30vw] flex flex-col place-content-end">
             <p className="text-white text-[1.5vw] font-bold text-left px-[2vw] py-[2vw]">
-              They say the toughest seas make the best sailors.
+              They say the toughest seas make the best sailors
             </p>
           </div>
           <div className="bg-pic2 bg-center bg-contain bg-no-repeat w-[25vw] h-[30vw] flex flex-col place-content-end">
             <p className="text-white text-[1.5vw] font-bold text-left px-[2vw] py-[1vw]">
-              They say that success happens in the uncomfortable zone.
+              They say that success happens in the uncomfortable zone
             </p>
           </div>
           <div className="bg-pic3 bg-center bg-contain bg-no-repeat w-[25vw] h-[30vw] flex flex-col place-content-end">
             <p className="text-white text-[1.5vw] font-bold text-left px-[2vw] py-[1vw]">
-              They say the hardest tests and challenges make the champion.
+              They say the hardest tests and challenges make the champion
             </p>
           </div>
         </div>
@@ -317,9 +313,9 @@ function Camp() {
         </p>
       </div>
 
-      <div className="w-full h-[55vw] flex flex-col bg-bg8 bg-center bg-cover bg-no-repeat">
+      <div className="w-full h-[40vw] flex flex-col bg-bg8 bg-center bg-cover bg-no-repeat">
         <img
-          className="flex object-contain w-[30vw] mt-[10vw] ml-[15vw]"
+          className="flex object-contain w-[30vw] mt-[8vw] ml-[15vw]"
           src={require("../assets/bg7.jpg")}
           alt={"ira and friends"}
         />
@@ -332,16 +328,17 @@ function Camp() {
           </span>
         </p>
 
-        <p className="text-black text-[1.4vw] mt-[15vw] ml-[15vw] tracking-tight leading-tight w-[45vw] text-left">
-          Do connect with the coaches to set up a time to learn more about how
-          you can get moving forward with The Next Level. As for international
-          students, the fee does not include flight travel and R&R in Singapore.
-          Schools can get in touch with us for bulk bookings too.
-        </p>
+        {/* <p className="text-black text-[1.4vw] mt-[15vw] ml-[15vw] tracking-tight leading-tight w-[45vw] text-left">
+                Do connect with the coaches to set up a time to learn more about
+                how you can get moving forward with The Next Level. As for
+                international students, the fee does not include flight travel
+                and R&R in Singapore. Schools can get in touch with us for bulk
+                bookings too.
+              </p> */}
 
-        <div className="hover:cursor-pointer place-self-end mr-[22vw] mt-[-6vw] content-center text-center text-white text-[1.4vw] px-[3vw] py-[1vw] rounded-full bg-[#05194A]">
-          Get in touch!
-        </div>
+        {/* <div className="hover:cursor-pointer place-self-end mr-[22vw] mt-[-6vw] content-center text-center text-white text-[1.4vw] px-[3vw] py-[1vw] rounded-full bg-[#05194A]">
+                Get in touch!
+              </div> */}
       </div>
 
       <div className="w-full h-[40vw] flex flex-row justify-center align-middle bg-[#F8F0F8]">
@@ -971,26 +968,10 @@ function Camp() {
           />
         </div>
         <div className="hover:cursor-pointer absolute place-self-center place-items-center rounded-full mt-[37vw] ml-[30vw] px-[5vw] py-[0.5vw] bg-[#05194A] text-white text-[1.1vw]">
-          <a
-            href="##"
-            // onClick={() =>
-            //   console.log({
-            //     childname,
-            //     schoolname,
-            //     pnumber,
-            //     parentsname,
-            //     childrenage,
-            //     country,
-            //     email,
-            //     input,
-            //   })
-            // }
-          >
-            Register
-          </a>
+          <a href="##">Register</a>
         </div>
 
-        <Link to="/privacy" target="_blank">
+        <Link to="/privacy">
           <div className="absolute place-self-center place-items-center rounded-full w-[20vw] mt-[41.5vw] ml-[-41vw] px-[5vw] py-[0.5vw] tracking-tight text-gray-500 text-[0.5vw]">
             By clicking the submit button below, I agree to and accept the{" "}
             <span className="text-gray-700 underline hover:cursor-pointer">
@@ -1008,6 +989,11 @@ function Camp() {
           <p className="text-white text-[2.5vw] font-extrabold text-center px-[10vw]">
             12TH TO 18TH OF DECEMBER 2022 IN BINTAN, INDONESIA.
           </p>
+          <a href="##" className="hover:cursor-pointer place-self-center">
+            <div className="hover:cursor-pointer place-self-center mt-[2vw] content-center text-center text-white text-[1.4vw] px-[3vw] py-[1vw] rounded-full bg-[#05194A]">
+              Get in touch!
+            </div>
+          </a>
         </div>
       </div>
       <div className="w-full h-[20vw] flex flex-col justify-center align-middle content-center pt-[5vw]">
