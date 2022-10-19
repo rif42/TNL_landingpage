@@ -85,11 +85,6 @@ function Team() {
               <img src={require("../assets/9.png")} alt={"Khoirul"} />
             </Link>
           </div>
-          <div className="flex flex-row justify-center px-[0.5vw] h-[10vw] align-middle">
-            <Link to="/team/imam">
-              <img src={require("../assets/10.png")} alt={"imam"} />
-            </Link>
-          </div>
         </Slider>
       </div>
     </>

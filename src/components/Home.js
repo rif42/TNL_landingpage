@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 function Home() {
-  const [learnmore, setLearnmore] = useState(0);
   const [selectionState, setSelectionState] = useState(0);
   const [slideState, setSlideState] = useState(0);
   const [quoteState, setquoteState] = useState(0);
@@ -23,6 +22,10 @@ function Home() {
   let checkingchildage;
   let checkemail;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   var settings = {
     dots: false,
     arrows: false,
@@ -36,7 +39,7 @@ function Home() {
 
   return (
     <div className="home-page flex flex-col w-full h-fit">
-      <div className="w-full h-fit flex flex-col bg-white pt-[5vw]">
+      <div className="w-full h-fit flex flex-col bg-white mt-[3vw]">
         <h2 className=" absolute place-self-center justify-center text-[#19103D] text-[4vw] font-extrabold text-center leading-none px-[15vw]">
           These are such tough times to be a parent
         </h2>
@@ -93,13 +96,13 @@ function Home() {
           </p>
           <a
             className="flex hover:cursor-pointer bg-gradient-to-r from-[#FC5229] to-[#AF067D] font-extrabold text-white text-[1.1vw] tracking-wide place-self-end place-content-center place-items-center justify-center align-middle rounded-xl px-[2vw] w-fit h-[2.5vw]"
-            href="##"
+            href="#registration"
           >
             GET IN TOUCH
           </a>
         </div>
         <img
-          className="flex object-contain w-full mt-[10vw]"
+          className="flex object-contain w-full mt-[-3vw]"
           src={require("../assets/bg4.jpg")}
           alt={"background4"}
         />
@@ -260,6 +263,8 @@ function Home() {
           <a
             className="flex hover:cursor-pointer bg-gradient-to-r from-[#2795D1] to-[#F44839] place-self-end place-content-center place-items-center justify-center align-middle rounded-full px-[3vw] w-fit h-[2.5vw]"
             href="web.scorecampus.com"
+            target="_blank"
+            rel="noreferrer"
           >
             <div className="flex flex-col text-center font-semibold tracking-wide justify-center align-middle place-self-center bg-white rounded-full text-[1.1vw] mx-[-2.9vw] w-[10vw] h-[2.3vw]">
               Scorecampus.com
@@ -273,7 +278,9 @@ function Home() {
 
           <a
             className="flex hover:cursor-pointer bg-gradient-to-r from-[#2795D1] to-[#F44839] place-self-end place-content-center place-items-center justify-center align-middle rounded-full px-[3vw] w-fit h-[2.5vw]"
-            href="web.scorecampus.com"
+            href="https://onelink.to/hc6ta4"
+            target="_blank"
+            rel="noreferrer"
           >
             <div className="flex flex-col text-center font-semibold tracking-wide justify-center align-middle place-self-center bg-white rounded-full text-[1.1vw] mx-[-2.9vw] w-[10vw] h-[2.3vw]">
               Let's Fl!p app
@@ -293,7 +300,7 @@ function Home() {
         </p>
         <a
           className="flex hover:cursor-pointer bg-gradient-to-r from-[#FC5229] to-[#AF067D] font-extrabold text-white text-[1.1vw] tracking-wide place-items-center mr-[33vw] mt-[3vw] rounded-full px-[2vw] w-fit h-[2.5vw]"
-          href="##"
+          href="#registration"
         >
           GET IN TOUCH
         </a>
@@ -444,7 +451,7 @@ function Home() {
         </div>
         <a
           className="flex hover:cursor-pointer bg-gradient-to-r from-[#FC5229] to-[#AF067D] font-extrabold text-white text-[3vw] tracking-wide place-items-center rounded-full mt-[5vw] mx-auto px-[4vw] w-fit h-[6vw]"
-          href="##"
+          href="#registration"
         >
           GET IN TOUCH
         </a>
@@ -524,12 +531,21 @@ function Home() {
               />
             </svg>
           </div>
-          <div
-            onClick={() => setLearnmore(learnmore === 0 ? 1 : 0)}
-            className="hover:cursor-pointer w-[10vw] h-[3vw] absolute place-self-end z-20 text-[1.5vw] underline text-blue-400 ml-[67.6vw] mt-[42vw]"
+          <Link
+            to={
+              slideState === 0
+                ? "/class"
+                : slideState === 1
+                ? "/thefirststep"
+                : slideState === 2
+                ? "/camp"
+                : null
+            }
           >
-            Learn More
-          </div>
+            <div className="hover:cursor-pointer w-[10vw] h-[3vw] absolute place-self-end z-20 text-[1.5vw] underline text-blue-400 ml-[67.6vw] mt-[42vw]">
+              Learn More
+            </div>
+          </Link>
 
           <Slider {...settings}>
             <div className="w-full h-[45vw] bg-bg1 bg-center bg-cover z-0">
@@ -596,23 +612,13 @@ function Home() {
               >
                 Testimony
               </p>
-              <p
-                onClick={() => {
-                  setSelectionState(3);
-                }}
-                className={
-                  selectionState === 3
-                    ? "px-[1vw] font-medium hover:cursor-pointer"
-                    : "px-[1vw] font-medium text-gray-400 hover:cursor-pointer"
-                }
-              >
-                Map
-              </p>
             </div>
             {selectionState === 0 ? (
               <p className="text-[2vw] font-bold text-center px-[5vw] py-[3vw] h-[20vw] leading-tight ">
                 {slideState === 0 ? (
-                  "The Perfect Bridge between the students’ academic learning and the real world."
+                  <span>
+                    5th to 8th December 2022 <br /> 7 to 17 years old
+                  </span>
                 ) : slideState === 1 ? (
                   "It is exactly as it says; The First Step! It is all you and this can potentially be one of the toughest 8 hours you would have spent in your life."
                 ) : slideState === 2 ? (
@@ -653,8 +659,6 @@ function Home() {
                 <br></br>
                 <br></br>- Kenny, The Next Level 2018 Kulim Camp, Malaysia!
               </p>
-            ) : selectionState === 3 ? (
-              <div className="flex flex-row bg-map bg-center bg-no-repeat bg-contain justify-center place-self-center place-content-center align-middle w-[37vw] h-[20vw]"></div>
             ) : null}
           </div>
         </div>
@@ -678,13 +682,16 @@ function Home() {
         </p>
         <a
           className="flex hover:cursor-pointer bg-gradient-to-r from-[#FC5229] to-[#AF067D] font-extrabold text-white text-[1.1vw] tracking-wide place-self-center place-content-center place-items-center rounded-full justify-center align-middle mt-[2vw] px-[2vw] w-fit h-[2.5vw] z-10"
-          href="##"
+          href="#registration"
         >
           GET IN TOUCH
         </a>
       </div>
 
-      <div className="w-full h-[50vw] flex flex-row justify-center align-middle p-[3vw] bg-[#F8F0F8]">
+      <div
+        id="registration"
+        className="w-full h-[50vw] flex flex-row justify-center align-middle p-[3vw] bg-[#F8F0F8]"
+      >
         <div className="w-[33%] h-[100%] flex flex-col justify-center align-middle bg-[#FB7135]">
           <p className="text-[4vw] text-white font-extrabold leading-none px-[3vw] text-left">
             HOW CAN I CONNECT WITH THE COACHES?

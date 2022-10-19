@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Privacypolicy() {
   const [policy1, setpolicy1] = useState(1);
@@ -12,6 +12,10 @@ function Privacypolicy() {
   const [policy9, setpolicy9] = useState(0);
   const [policy10, setpolicy10] = useState(0);
   const [policy11, setpolicy11] = useState(0);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

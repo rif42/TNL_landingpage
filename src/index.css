@@ -5,12 +5,14 @@
 
 
 body {
+  
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 code {
@@ -32,4 +34,8 @@ code {
   height: 5vw;
   margin-top: 12vw;
   margin-left:44vw;
+}
+
+html{
+  scroll-behavior: smooth;
 }

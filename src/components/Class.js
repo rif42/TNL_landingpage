@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 
 function Class() {
   const [selectionState, setSelectionState] = useState(0);
   var settings = {
     dots: true,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
@@ -12,9 +13,13 @@ function Class() {
     className: "mt-[3vw] w-[52vw] h-[33vw] flex flex-row",
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="class-page flex flex-col w-full h-fit">
-      <div className="w-full h-[50vw]"></div>
+      {/* <div className="w-full h-[50vw]"></div> */}
 
       <div className="w-full h-[65vw] bg-bgclass3 bg-center bg-no-repeat bg-cover flex flex-col justify-center align-middle">
         <h2 className="text-white text-[3vw] font-extrabold place-self-center justify-center text-center px-[10vw] leading-none">

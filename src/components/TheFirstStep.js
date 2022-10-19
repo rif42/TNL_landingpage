@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function TheFirstStep() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="tfs-page w-full h-fit flex flex-col justify-center align-middle">
-      <div className="w-full h-[50vw] bg-white"></div>
+      {/* <div className="w-full h-[50vw] bg-white"></div> */}
       <div className="w-full h-[45vw] bg-tfs0 bg-center bg-cover flex flex-col justify-center align-middle">
         <p className="text-[#05194A] text-[1.5vw] leading-none">
           The First Step is the mother of all Social Emotional Learning
