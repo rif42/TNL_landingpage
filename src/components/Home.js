@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import Form from "./Form";
 
 function Home() {
   const [selectionState, setSelectionState] = useState(0);
@@ -128,7 +129,7 @@ function Home() {
         </p>
         <p
           style={{
-            "text-shadow":
+            "textShadow":
               "-2px -2px 0 #FF5C00,2px -2px 0 #FF5C00,-2px 2px 0 #FF5C00, 2px 2px 0 #FF5C00",
           }}
           className="text-[2vw] italic text-white tracking-wide px-[18vw] text-left pt-[3vw] font-extrabold"
@@ -152,7 +153,7 @@ function Home() {
         </p>
         <p
           style={{
-            "text-shadow":
+            "textShadow":
               "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
           }}
           className="text-[3vw] text-[#F5AA4D] px-[15vw] text-center pt-[3vw] font-extrabold"
@@ -170,7 +171,7 @@ function Home() {
 
             <p
               style={{
-                "text-shadow":
+                "textShadow":
                   "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
               }}
               className="text-[5vw] text-[#F7AF4D] text-center font-extrabold"
@@ -189,7 +190,7 @@ function Home() {
 
             <p
               style={{
-                "text-shadow":
+                "textShadow":
                   "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
               }}
               className="text-[5vw] text-[#F7AA4E] text-center font-extrabold"
@@ -208,7 +209,7 @@ function Home() {
 
             <p
               style={{
-                "text-shadow":
+                "textShadow":
                   "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
               }}
               className="text-[5vw] text-[#F5A752] text-center font-extrabold"
@@ -227,7 +228,7 @@ function Home() {
 
             <p
               style={{
-                "text-shadow":
+                "textShadow":
                   "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
               }}
               className="text-[5vw] text-[#F4A354] text-center font-extrabold"
@@ -687,7 +688,8 @@ function Home() {
           GET IN TOUCH
         </a>
       </div>
-
+      <Form />
+{/* 
       <div
         id="registration"
         className="w-full h-[50vw] flex flex-row justify-center align-middle p-[3vw] bg-[#F8F0F8]"
@@ -735,7 +737,7 @@ function Home() {
             className="flex flex-col justify-center w-[80%] h-[2.5vw] border-[0.1vw] border-gray-500 align-middle rounded-md px-[0.5vw] text-[0.9vw] self-center text-left font-montserrat py-[0.5vw]"
           />
           <p
-            class="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]"
+            className="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]"
             id="name-error"
           ></p>
           <label
@@ -816,7 +818,7 @@ function Home() {
             className="flex flex-col justify-center w-[80%] h-[2.5vw] border-[0.1vw] border-gray-500 align-middle rounded-md px-[0.5vw] text-[0.9vw] self-center text-left font-montserrat py-[0.5vw]"
           />
           <p
-            class="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]"
+            className="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]"
             id="parent-name-error"
           ></p>
         </div>
@@ -849,7 +851,7 @@ function Home() {
             className="flex flex-col justify-center w-[80%] h-[2.5vw] border-[0.1vw] border-gray-500 align-middle rounded-md px-[0.5vw] text-[0.9vw] self-center text-left font-montserrat py-[0.5vw]"
           />
           <p
-            class="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]"
+            className="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]"
             id="age-error"
           ></p>
           <label
@@ -1200,7 +1202,7 @@ function Home() {
             className="flex flex-col justify-center w-[80%] h-[2.5vw] border-[0.1vw] border-gray-500 align-middle rounded-md px-[0.5vw] text-[0.9vw] self-center text-left font-montserrat py-[0.5vw]"
           />
           <p
-            class="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]"
+            className="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]"
             id="email-error"
           ></p>
           <label
@@ -1234,7 +1236,7 @@ function Home() {
             </span>
           </div>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }

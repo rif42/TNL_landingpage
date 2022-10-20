@@ -62,7 +62,7 @@ function ContactUs() {
             className="flex flex-col justify-center w-[80%] h-[2.5vw] border-[0.1vw] border-gray-500 align-middle rounded-md px-[0.5vw] text-[0.9vw] self-center text-left font-montserrat py-[0.5vw]"
           />
           <p
-            class="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]"
+            className="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]"
             id="name-error"
           ></p>
           <label
@@ -143,7 +143,7 @@ function ContactUs() {
             className="flex flex-col justify-center w-[80%] h-[2.5vw] border-[0.1vw] border-gray-500 align-middle rounded-md px-[0.5vw] text-[0.9vw] self-center text-left font-montserrat py-[0.5vw]"
           />
           <p
-            class="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]"
+            className="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]"
             id="parent-name-error"
           ></p>
         </div>
@@ -176,7 +176,7 @@ function ContactUs() {
             className="flex flex-col justify-center w-[80%] h-[2.5vw] border-[0.1vw] border-gray-500 align-middle rounded-md px-[0.5vw] text-[0.9vw] self-center text-left font-montserrat py-[0.5vw]"
           />
           <p
-            class="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]"
+            className="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]"
             id="age-error"
           ></p>
           <label
@@ -527,7 +527,7 @@ function ContactUs() {
             className="flex flex-col justify-center w-[80%] h-[2.5vw] border-[0.1vw] border-gray-500 align-middle rounded-md px-[0.5vw] text-[0.9vw] self-center text-left font-montserrat py-[0.5vw]"
           />
           <p
-            class="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]"
+            className="text-red-500 text-xs italic font-montserrat text-[0.9vw] text-black place-self-start pl-[3.1vw] pb-[1vw]"
             id="email-error"
           ></p>
           <label
