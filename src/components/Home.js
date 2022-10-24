@@ -116,20 +116,23 @@ function Home() {
           alt={"decoration"}
         />
         <p className="text-[#190539]  font-medium text-[1.2vw] flex flex-col text-left px-[18vw]">
-          I am going to be honest here. Working with Coach Gabe was a challenge.
-          Matthew got 5/100 for all his subjects when I brought him to Coach.
-          Matthew was on medication for ADHD and the school had nothing but
-          complaints about him.<br></br> <br></br> Coach Gabe told me that he
-          would do his best. This was Matt’s PSLE year and we went to Score
-          Campus in June. Results came and he got 225. We were speechless for an
-          hour. I asked Matt, how did he do this?
-          <br></br> <br></br> He replied, The coaches built me a table to stand
-          and do my work. Every time I got a right answer, he gave hugs, high
-          fives and a genius cookie.”
+          I am going to be honest here. Working with the coaches of Score Campus
+          was a challenge. Matthew got 5/100 for all his subjects when I brought
+          him there the first time. Matthew was on medication for ADHD and the
+          school had nothing but complaints about him.
+          <br />
+          <br /> The coaches told me that they would do their best. This was
+          Matt’s PSLE year and we went to Score Campus in June. Results came and
+          he got 225. We were speechless for an hour. I asked Matt, how did he
+          do this?
+          <br />
+          <br /> He replied, “The coaches built me a table to stand and do my
+          work. Every time I got a right answer, he gave hugs, high fives and
+          the genius cookie!”
         </p>
         <p
           style={{
-            "textShadow":
+            textShadow:
               "-2px -2px 0 #FF5C00,2px -2px 0 #FF5C00,-2px 2px 0 #FF5C00, 2px 2px 0 #FF5C00",
           }}
           className="text-[2vw] italic text-white tracking-wide px-[18vw] text-left pt-[3vw] font-extrabold"
@@ -153,7 +156,7 @@ function Home() {
         </p>
         <p
           style={{
-            "textShadow":
+            textShadow:
               "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
           }}
           className="text-[3vw] text-[#F5AA4D] px-[15vw] text-center pt-[3vw] font-extrabold"
@@ -171,7 +174,7 @@ function Home() {
 
             <p
               style={{
-                "textShadow":
+                textShadow:
                   "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
               }}
               className="text-[5vw] text-[#F7AF4D] text-center font-extrabold"
@@ -190,7 +193,7 @@ function Home() {
 
             <p
               style={{
-                "textShadow":
+                textShadow:
                   "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
               }}
               className="text-[5vw] text-[#F7AA4E] text-center font-extrabold"
@@ -209,7 +212,7 @@ function Home() {
 
             <p
               style={{
-                "textShadow":
+                textShadow:
                   "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
               }}
               className="text-[5vw] text-[#F5A752] text-center font-extrabold"
@@ -228,7 +231,7 @@ function Home() {
 
             <p
               style={{
-                "textShadow":
+                textShadow:
                   "-2px -2px 0 #FFFFFF,2px -2px 0 #FFFFFF,-2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF",
               }}
               className="text-[5vw] text-[#F4A354] text-center font-extrabold"
@@ -689,7 +692,7 @@ function Home() {
         </a>
       </div>
       <Form />
-{/* 
+      {/* 
       <div
         id="registration"
         className="w-full h-[50vw] flex flex-row justify-center align-middle p-[3vw] bg-[#F8F0F8]"

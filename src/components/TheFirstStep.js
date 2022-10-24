@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function TheFirstStep() {
   useEffect(() => {
@@ -136,11 +137,11 @@ function TheFirstStep() {
           For schools and organizations, The First Step is best when done in
           small groups. 25 to 30 for optimum outcomes.
         </p>
-        <a href="##" className="place-self-center pr-[10vw]">
-          <div className="w-[20vw] h-[4vw] flex flex-col justify-center text-[1.3vw] text-white font-semibold rounded-full bg-[#05194A]">
+        <Link to="/contactus">
+          <div className="w-[20vw] h-[4vw] flex flex-col justify-center place-self-center text-[1.3vw] text-white font-semibold rounded-full bg-[#05194A]">
             Call us for a cup of coffee
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );
