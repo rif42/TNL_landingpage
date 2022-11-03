@@ -7,19 +7,6 @@ import Form from "./Form";
 function Camp() {
   const [quoteState, setquoteState] = useState(0);
   const [faqState, setfaqState] = useState(0);
-  const [childname, setChildname] = useState("");
-  const [schoolname, setSchoolname] = useState("");
-  const [pnumber, setPnumber] = useState("");
-  const [parentsname, setParentsname] = useState("");
-  const [childrenage, setChildrenage] = useState("");
-  const [country, setCountry] = useState("");
-  const [email, setEmail] = useState("");
-  const [input, setInput] = useState("");
-
-  let checkingchildname;
-  let checkingparentsname;
-  let checkingchildage;
-  let checkemail;
 
   useEffect(() => {
     window.scrollTo(0, 0);

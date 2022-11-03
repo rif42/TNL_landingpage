@@ -22,15 +22,6 @@ import "./App.css";
 import ContactUs from "./components/ContactUs";
 
 function App() {
-  //Done:
-  // 1. new navigation items
-  // 2. everything scrolls up when changing pages
-  // 2. privacy policy
-  // 3. contact us
-  // 4. redirecting to register
-
-  //todoL
-  //1. why? tab content
   const [navpopup, setNavpopup] = useState(false);
 
   useEffect(() => {
@@ -131,23 +122,23 @@ function App() {
             alt={"TNL LOGO"}
           />
           <div className="font-montserrat mt-[-1vw] w-[60vw] h-[3vw] place-self-center place-content-center place-items-center flex flex-row justify-evenly align-middle">
-            <p className="text-[#61697D] font-medium hover:cursor-pointer">
+            <p className="text-[#61697D] text-[1vw] font-medium hover:cursor-pointer">
               Home
             </p>
             <p
               onClick={() => setNavpopup(!navpopup)}
-              className="text-[#61697D] font-medium hover:cursor-pointer"
+              className="text-[#61697D] text-[1vw] font-medium hover:cursor-pointer"
             >
               Experiences ᐯ
             </p>
             <Link to="/team">
-              <p className="text-[#61697D] font-medium hover:cursor-pointer">
+              <p className="text-[#61697D] text-[1vw] font-medium hover:cursor-pointer">
                 Team Profile
               </p>
             </Link>
 
             <Link to="/contactus">
-              <p className="text-[#61697D] font-medium hover:cursor-pointer">
+              <p className="text-[#61697D] text-[1vw] font-medium hover:cursor-pointer">
                 Contact Us
               </p>
             </Link>
@@ -220,7 +211,7 @@ function App() {
               </svg>
             </a>
           </div>
-          <p className="font-montserrat text-[#61697D] font-medium pb-[2vw] pt-[0.2vw]">
+          <p className="font-montserrat text-[#61697D] text-[1vw] font-medium pb-[2vw] pt-[0.2vw]">
             © 2022 The Next Level Camp. All rights reserved. /
             <Link to="/privacy">Privacy Policy</Link>
           </p>

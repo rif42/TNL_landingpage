@@ -6,22 +6,6 @@ import Form from "./Form";
 function Home() {
   const [selectionState, setSelectionState] = useState(0);
   const [slideState, setSlideState] = useState(0);
-  const [quoteState, setquoteState] = useState(0);
-  const [faqState, setfaqState] = useState(0);
-  const [cardState, setCardState] = useState(1);
-  const [childname, setChildname] = useState("");
-  const [schoolname, setSchoolname] = useState("");
-  const [pnumber, setPnumber] = useState("");
-  const [parentsname, setParentsname] = useState("");
-  const [childrenage, setChildrenage] = useState("");
-  const [country, setCountry] = useState("");
-  const [email, setEmail] = useState("");
-  const [input, setInput] = useState("");
-
-  let checkingchildname;
-  let checkingparentsname;
-  let checkingchildage;
-  let checkemail;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -34,7 +18,7 @@ function Home() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    className: " w-[99%] h-full flex flex-row",
+    className: " w-[99.8%] h-full flex flex-row",
     afterChange: (current) => setSlideState(current),
   };
 
@@ -133,7 +117,7 @@ function Home() {
         <p
           style={{
             textShadow:
-              "-2px -2px 0 #FF5C00,2px -2px 0 #FF5C00,-2px 2px 0 #FF5C00, 2px 2px 0 #FF5C00",
+              "-2px -2px 2px #FF5C00,2px -2px 2px #FF5C00,-2px 2px 2px #FF5C00, 2px 2px 2px #FF5C00",
           }}
           className="text-[2vw] italic text-white tracking-wide px-[18vw] text-left pt-[3vw] font-extrabold"
         >
@@ -586,8 +570,8 @@ function Home() {
                 }}
                 className={
                   selectionState === 0
-                    ? "px-[1vw] font-medium hover:cursor-pointer"
-                    : "px-[1vw] font-medium text-gray-400 hover:cursor-pointer"
+                    ? "px-[1vw] text-[1.5vw] font-medium hover:cursor-pointer"
+                    : "px-[1vw] text-[1.5vw] font-medium text-gray-400 hover:cursor-pointer"
                 }
               >
                 Details
@@ -598,8 +582,8 @@ function Home() {
                 }}
                 className={
                   selectionState === 1
-                    ? "px-[1vw] font-medium hover:cursor-pointer"
-                    : "px-[1vw] font-medium text-gray-400 hover:cursor-pointer"
+                    ? "px-[1vw] text-[1.5vw] font-medium hover:cursor-pointer"
+                    : "px-[1vw] text-[1.5vw] font-medium text-gray-400 hover:cursor-pointer"
                 }
               >
                 Why?
@@ -610,8 +594,8 @@ function Home() {
                 }}
                 className={
                   selectionState === 2
-                    ? "px-[1vw] font-medium hover:cursor-pointer"
-                    : "px-[1vw] font-medium text-gray-400 hover:cursor-pointer"
+                    ? "px-[1vw] text-[1.5vw] font-medium hover:cursor-pointer"
+                    : "px-[1vw] text-[1.5vw] font-medium text-gray-400 hover:cursor-pointer"
                 }
               >
                 Testimony
