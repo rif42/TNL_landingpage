@@ -24,53 +24,53 @@ function Home() {
 
   return (
     <div className="home-page flex flex-col w-full h-fit">
-      <div className="w-full h-fit flex flex-col bg-white mt-[3vw]">
-        <h2 className=" absolute place-self-center justify-center text-[#19103D] text-[4vw] font-extrabold text-center leading-none px-[15vw]">
+      <div className="w-full h-fit flex flex-col bg-white ">
+        <h2 className=" absolute place-self-center justify-center mt-[3vw] text-[#19103D] text-[4vw] font-extrabold text-center leading-none px-[15vw]">
           These are such tough times to be a parent
         </h2>
         <div
           className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
-          mt-[10vw] ml-[15vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
+          mt-[13vw] ml-[15vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
         >
           Schools have gotten harder.
         </div>
         <div
           className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
-          mt-[14vw] ml-[7vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
+          mt-[17vw] ml-[7vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
         >
           The bad elements of social media are<br></br>victimizing our children
         </div>
         <div
           className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
-          mt-[20vw] ml-[10vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
+          mt-[23vw] ml-[8vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
         >
           They have become more dependent and<br></br>entitled than ever before
         </div>
         <div
           className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
-          mt-[26vw] ml-[10vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
+          mt-[29vw] ml-[10vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
         >
           They have become reclusive
         </div>
         <div
           className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
-          mt-[11vw] ml-[55vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
+          mt-[15vw] ml-[55vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
         >
           We have all becomes addicts of technology<br></br>(mostly the phone)
         </div>
         <div
           className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
-          mt-[18vw] ml-[60vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
+          mt-[21vw] ml-[65vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
         >
           It is so difficult to understand their needs
         </div>
         <div
           className="w-fit h-fit absolute  font-medium text-gray-500 text-[1.1vw] bg-white outline-[#3D2B93] 
-          mt-[23vw] ml-[67vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
+          mt-[26vw] ml-[72vw] px-[2vw] py-[0.3vw] rounded-full outline outline-1 text-center"
         >
           Gaming world is larger than ever and is<br></br>sucking our kids in
         </div>
-        <div className="absolute flex flex-col justify-end w-[45vw] h-fit place-self-end mt-[80%] mr-[5%]">
+        <div className="absolute flex flex-col justify-end w-[45vw] h-fit place-self-end mt-[93%] mr-[5%]">
           <h2 className=" text-white text-[3vw] font-bold text-right leading-tight">
             It’s tough. We see it. We now both need to agree that more has to be
             done
@@ -87,7 +87,7 @@ function Home() {
           </a>
         </div>
         <img
-          className="flex object-contain w-full mt-[-3vw]"
+          className="flex object-contain w-full mt-[11vw]"
           src={require("../assets/bg4.jpg")}
           alt={"background4"}
         />
