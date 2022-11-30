@@ -459,7 +459,7 @@ function Camp() {
             2022 Dates of The Next Level Camp
           </p>
           <p className="text-white text-[2.5vw] font-extrabold text-center px-[10vw]">
-            12TH TO 18TH OF DECEMBER 2022 IN BINTAN, INDONESIA.
+            12TH TO 16TH OF DECEMBER 2022 IN JOHOR, MALAYSIA.
           </p>
           <a
             href="#registration"
